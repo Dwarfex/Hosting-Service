@@ -1,0 +1,13 @@
+<form action="index.php?site=videos&action=saveedit" method="post" name="saveedit"enctype="multipart/form-data">
+<table width="100%" cellspacing="1" cellpadding="2" bgcolor="$border">
+	<tr bgcolor="$bghead"><td align="center" class="title" colspan="2">Video bearbeiten</td></tr>
+    <tr><td bgcolor="$bg1">Name:</td><td bgcolor="$bg2"><input type="text" name="name" value="$ds[vidheadline]"></td></tr>
+    <tr><td bgcolor="$bg1">$leng:</td><td bgcolor="$bg2"><input type="text" name="length" value="$ds[vidlength]"></td></tr>
+    <tr><td bgcolor="$bg1">Uploader:</td><td bgcolor="$bg2"><input type="text" name="source" value="$ds[vidsource]"></td></tr>
+    <tr><td bgcolor="$bg1">$cat:</td><td bgcolor="$bg2"><select name="rubric">$rubriken</select></td></tr>
+    <tr><td bgcolor="$bg1">Video-Portal:</td><td bgcolor="$bg2"><select name="portal">$ports</select></td></tr>
+    <tr><td bgcolor="$bg1">$desc:</td><td bgcolor="$bg2"><textarea name="description" cols="60" rows="7">$ds[viddescription]</textarea></td></tr>
+    <tr><td bgcolor="$bg1">Video-ID:</td><td bgcolor="$bg2"><input type="text" name="clip" value="$ds[vidclip]" size="62"></td></tr>
+    <tr><td bgcolor="$bg1"><input type="submit" value="save" name="saveedit"></td><td bgcolor="$bg2"><input type="hidden" value="$id" name="id"</td></tr>
+</table>
+</form>

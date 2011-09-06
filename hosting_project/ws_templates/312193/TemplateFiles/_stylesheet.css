@@ -1,0 +1,205 @@
+/* Main Layout */
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #606060;
+  background:#3e3e3e;
+  margin:0;
+}
+
+img { border: none; }
+
+hr {
+  color:#f58a17;
+  background-color:#f58a17;
+  border:0px;
+  border-top:transparent;
+  border-bottom:transparent;
+  padding:0;
+  margin:2px 0;
+  height:1px;
+}
+
+/* Links */
+a, a:visited, a:active {
+  color: #606060;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+a:hover {
+  color: #f58a17;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.titlelink, a.titlelink:visited, a.titlelink:active {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.titlelink:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a.category, a.category:visited, a.category:active {
+  color: #333333;
+  text-decoration: none;
+}
+
+a.category:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Font types */
+h2 { background:url(styles/content/balkengross.png); width:648px; height:18px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; color:#fffffe; text-transform: uppercase; font-weight:bold; margin:0 0 10px 0; padding:4px 0 0 20px; }
+
+h3 { background:url(styles/content/balkenklein.png); width:308px; height:18px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; color:#fffffe; text-transform: uppercase; font-weight:bold; margin:0 0 6px 0; padding:4px 0 0 20px;  }
+
+small {
+  color: #383838;
+  font: normal 9px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.title {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #FFFFFF;
+  font-weight: bold;
+  background:url(styles/content/title.jpg);
+  height:22px;
+}
+
+.category_big, .category_big a {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.category {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  font-weight: normal;
+}
+
+/* Forms */
+form {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+input, textarea, select {
+  border: 1px solid #989898;
+  background-color: #F0F0F0;
+  font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+  color: #666666;
+}
+
+input:active, textarea:active, select:active, input:focus, textarea:focus, select:focus {
+  border: 1px solid #CCCCCC;
+  background-color: #F6F6F6;
+  color: #2C2C2C;
+}
+
+input[type="radio"], input[type="checkbox"], 
+input[type="radio"]:focus, input[type="radio"]:active,
+input[type="checkbox"]:focus, input[type="checkbox"]:active {
+  border: 0px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  margin: 2px;
+}
+
+/* Infomessages - Miscellaneous */
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  border: 1px solid #616161;
+  border-left: 4px solid #f6982f;
+  padding: 4px 10px;
+  z-index: 100;
+}
+
+.errorbox {
+  background-color: #FFCCCC;
+  border: 1px dashed #D60000;
+  color: #666666;
+  font-size: 10px;
+  width: 350px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* BBCode Tags */
+.quote {
+  color: #383838;
+  text-align: left;
+  font: normal 9px Verdana, Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.list {
+	list-style-type: disc;
+	list-style-position:outside;
+}
+.list_num {
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
+.list_alpha {
+	list-style-type: lower-latin;
+	list-style-position:outside;
+}
+
+.code {
+  color: #000000;
+  text-align: left;
+  margin: 0 auto;
+  padding: 3px;
+  font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.codeinner {
+  color: #000000;
+  font: 11px 'Courier New', Courier, monospace;
+}
+
+.codeline0 {
+	background-color: #F3F3F3;
+	height: 15px;
+	padding-left: 3px;
+	white-space: nowrap;
+}
+
+.codeline1 {
+	background-color: #FFFFFF;
+	height: 15px;
+	padding-left: 3px;
+	white-space: nowrap;
+}
+
+.white { font-weight:bold; color:#ffffff; }
+.orange { font-weight:bold; color:#fc901c; }
+.grey { font-weight:bold; color:#808080; }
+
+a.whiteor, a.whiteor:visited, a.whiteor:active { color:#ffffff; text-decoration:none; font-weight:bold; }
+a.whiteor:hover { color:#fc901c; text-decoration:none; font-weight:bold; }
+
+a.orangewh, aorangewh:visited, a.orangewh:active { color:#fc901c; text-decoration:none; font-weight:bold; }
+a.orangewh:hover { color:#cb6900; text-decoration:none; font-weight:bold; }

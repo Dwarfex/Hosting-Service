@@ -1,0 +1,112 @@
+<script language="JavaScript" type="text/javascript">
+function numbersonly(myfield, e, dec)
+{
+var key;
+var keychar;
+
+if (window.event)
+   key = window.event.keyCode;
+else if (e)
+   key = e.which;
+else
+   return true;
+keychar = String.fromCharCode(key);
+
+// control keys
+if ((key==null) || (key==0) || (key==8) || 
+    (key==9) || (key==13) || (key==27) )
+   return true;
+
+// numbers
+else if ((("0123456789.,").indexOf(keychar) > -1))
+   return true;
+
+// decimal point jump
+else if (dec && (keychar == "."))
+   {
+   myfield.form.elements[dec].focus();
+   return false;
+   }
+else
+   return false;
+}
+
+//-->
+</script>
+<form method="post" name="saveedit" action="index.php?site=shop" enctype="multipart/form-data">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="$border">
+  <tr> 
+   <td class="title" align="center" height="17">%edit_product%</td>
+  </tr>
+  <tr> 
+   <td>
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" bgcolor="$border">
+     <tr> 
+      <td bgcolor="$bg1">%category%:</td>
+      <td bgcolor="$bg1"><select name="cat">$cats</select></td>
+     </tr>
+     <tr> 
+      <td bgcolor="$bg2">%name%:</td>
+      <td bgcolor="$bg2"><input name="name" type="text" value="$name" size="40" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'"></td>
+     </tr>
+     <tr> 
+      <td bgcolor="$bg1">%item_num%:</td>
+      <td bgcolor="$bg1"><input name="artikelnr" type="text" value="$artikelnr" size="40" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'"></td>
+     </tr>
+     <tr>
+       <td bgcolor="$bg2">%stock%</td>
+       <td bgcolor="$bg2"><input name="lager" type="text" class="form_off" id="lager" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$lager" size="8" onKeyPress="return numbersonly(this, event)" />
+         x</td>
+     </tr>
+     <tr>
+       <td bgcolor="$bg1">%price%:</td>
+       <td bgcolor="$bg1"><input name="preis" type="text" class="form_off" id="preis" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$preis" size="8" onKeyPress="return numbersonly(this, event)" />
+       $currency (%inc_tax%)</td>
+     </tr>
+     <tr>
+       <td bgcolor="$bg2">%delivery%:</td>
+       <td bgcolor="$bg2"><input name="lieferzeit" type="text" class="form_off" id="lieferzeit" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$lieferzeit" size="8" onKeyPress="return numbersonly(this, event)" />
+         %days%</td>
+     </tr>
+     <tr>
+       <td bgcolor="$bg1">%weight%:</td>
+       <td bgcolor="$bg1"><input name="weight" type="text" class="form_off" id="lieferzeit" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$weight" size="8" onKeyPress="return numbersonly(this, event)" />
+         %weight_format%</td>
+     </tr>
+     <tr>
+       <td bgcolor="$bg2">%brand%:</td>
+       <td bgcolor="$bg2"><input name="brand" type="text" class="form_off" id="lieferzeit" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$brand" size="40" /></td>
+     </tr>
+     <tr> 
+      <td bgcolor="$bg1">%description%:</td>
+      <td bgcolor="$bg1"><textarea name="info" cols="40" rows="5" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'">$info</textarea><br /><span style="color:#999999;">%bbcode%</span></td>
+     </tr>
+	 <tr>
+      <td bgcolor="$bg2">%picture%:</td>
+      <td bgcolor="$bg2"><input name="bild" type="file" /></td>
+     </tr>
+     <tr>
+      <td align="left" bgcolor="$bg1">%current_pic%:</td>
+      <td bgcolor="$bg1">$pic</td>
+     </tr>
+     <tr>
+      <td align="left" bgcolor="$bg2">%comments%:</td>
+      <td bgcolor="$bg2"><select name="comments">
+          <option value="0">%no_comments%</option>
+          <option value="1">%user_comments%</option>
+          <option value="2" selected="selected">%visitor_comments%</option>
+        </select></td>
+     </tr>
+     <tr>
+      <td bgcolor="$bg1">%enbl_share%:</td>
+      <td bgcolor="$bg1"><select name="share">$share</select></td>
+     </tr>
+     <tr> 
+      <td align="right" bgcolor="$bg2"><input type="hidden" name="produktID" value="$produktID"></td>
+      <td bgcolor="$bg2"><input name="saveedit" type="submit" value="%edit_product%"></td>
+     </tr>
+    </table>
+   </td>
+  </tr>
+ </table>
+</form>

@@ -1,0 +1,71 @@
+.clear { clear:both; }
+#container { width:894px; height:auto; border:1px solid #fff; margin:auto; }
+#header { background:url(styles/header.jpg); width:894px; height:166px; }
+#language { width:auto; height:15px; padding:4px 4px 0 0; text-align:right; }
+#rotation { width:468px; height:60px; float:right; overflow:hidden; padding:33px 29px 0 0; }
+
+#navibutton { background:url(styles/navi/nav1bg.jpg); width:480px; height:33px; float:left; }
+#navibutton ul { margin:0; padding:0; }
+#navibutton li { list-style-type:none; margin:0; padding:0; position:relative; float:left; }
+#navibutton a { display:block; height:33px; font-size:0px; text-indent:-9999px; cursor:pointer; }
+#navitext {background:url(styles/navi/nav2bg.jpg); width:414px; height:33px; float:left; }
+#navitext ul { margin:0; padding:8px 0 0 0; }
+#navitext li { list-style-type:none; margin:0; padding:0 4px; float:left; }
+#navitext a { font-size:10px; color:#aeaeae; }
+#navitext a:hover, a:active, a:visited { font-size:10px; color:#ba0000; }
+#infos { background:url(styles/navi/info.png); width:120px; height:30px; }
+#infos:hover a:hover, #infos a.aktiv { background:url(styles/navi/infoh.png); width:120px; height:30px; }
+#teams { background:url(styles/navi/teams.png); width:120px; height:30px; left:-12px; }
+#teams:hover a:hover, #teams a.aktiv  { background:url(styles/navi/teamsh.png); width:120px; height:30px; }
+#comm { background:url(styles/navi/comm.png); width:120px; height:30px; left:-24px; }
+#comm:hover a:hover, #comm a.aktiv  { background:url(styles/navi/commh.png); width:120px; height:30px; }
+#media { background:url(styles/navi/media.png); width:120px; height:30px; left:-36px; }
+#media:hover a:hover, #media a.aktiv  { background:url(styles/navi/mediah.png); width:120px; height:30px; }
+
+#contentpuffer { background:url(styles/contentpuffer.jpg); width:886px; height:auto; margin-left:4px; }
+#contenttop { background:url(styles/contenttop.jpg); width:886px; height:15px; }
+#left { width:574px; height:auto; float:left; padding-left:14px; }
+.bgtop { background:url(styles/left/topbg.jpg); width:284px; height:305px; float:left; overflow:hidden; display:inline; }
+.bgtop ul { margin:0; padding:0; }
+.bgtop li { list-style-type:none; margin:10px; padding:0; }
+.hr { background:#bebebe; width:276px; height:1px; margin:3px 0 5px 5px; overflow:hidden; }
+#contop { background:url(styles/left/contop.jpg); width:574px; height:7px; margin-top:4px; overflow:hidden; }
+#conpuffer { background:url(styles/left/conpuffer.jpg); width:564px; min-height:100px; height:auto; padding:0 5px 0 5px; }
+#conbottom { background:url(styles/left/conbottom.jpg); width:574px; height:3px; overflow:hidden; }
+#right { width:278px; height:auto; float:right; padding-right:15px; }
+.sliderwrapper { background:#1e1e1f; width:278px; height:304px; position:relative; overflow:hidden;  }
+.sliderwrapper .contentdiv { width:278px; height:304px; position:absolute; left:0; top:0; visibility:hidden; }
+.pagination { visibility:hidden; overflow:hidden; display:none; }
+.righttop { background:url(styles/right/righttopbg.jpg); width:278px; height:9px; overflow:hidden; margin-top:5px; }
+.rightpuffer { background:url(styles/right/rightpuffer.jpg); width:278px; height:auto; }
+.rightpuffer ul { padding:6px 0 0 0 ; margin:0; }
+.rightpuffer li { list-style-type:none; padding:4px 0 4px 8px; margin:0; }
+.rightbottom { background:url(styles/right/rightbottombg.jpg); width:278px; height:2px; overflow:hidden; }
+#contentbottom { background:url(styles/contentbottom.jpg); width:886px; height:11px; overflow:hidden; }
+
+.logininput { background:#fffffe; width:141px; height:14px; border:1px solid #d7d7d7; margin:3px 0; padding:3px; }
+.loginbereich { width:160px; height:auto; float:left; padding:10px; }
+.loginbereich2 { width:auto; height:auto; float:left; padding:10px; }
+
+.loggedwel { width:auto; height:auto; text-align:center; }
+.loggedava { padding:0 6px 6px 6px; float:left; }
+.loggedlink { padding:0 3px; }
+
+.resultabs { padding:2px 7px; float:left; }
+.resultsabs1 { padding:2px 0; float:left; }
+
+.sponsors { padding:10px 0; text-align:center; }
+.sponsorsab { text-align:center; }
+
+.tnewsheadline { padding:3px 0 0 5px; float:left; }
+.tnewsdate { padding:5px 7px 0 0; float:right; }
+.tnewspic { background:#fff; width:270px; height:74px; border:1px solid #bebebe; padding:2px; margin-left:5px; }
+.tnewstext { padding:5px 4px 5px 5px; }
+
+.newspic { background:#000; width:558px; height:71px; padding:3px; }
+.newshead { background:url(styles/left/newsbg.jpg); width:auto; height:29px; }
+.newsheadline { padding-left:6px; padding-top:6px; float:left; }
+.newsdate { padding:8px; float:right; }
+.newstext { padding:15px; }
+
+#copy { width:auto; padding:5px; text-align:center; } 

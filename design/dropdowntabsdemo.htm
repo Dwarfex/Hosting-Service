@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Dynamic Drive DHTML Scripts- Drop Down Tabs demos</title>
+
+<script type="text/javascript" src="dropdowntabfiles/dropdowntabs.js">
+
+/***********************************************
+* Drop Down Tabs Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<!-- CSS for Drop Down Tabs Menu #1 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/ddcolortabs.css" />
+
+<!-- CSS for Drop Down Tabs Menu #2 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/bluetabs.css" />
+
+<!-- CSS for Drop Down Tabs Menu #3 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/slidingdoors.css" />
+
+
+<!-- CSS for Drop Down Tabs Menu #4 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/glowtabs.css" />
+
+<!-- CSS for Drop Down Tabs Menu #5 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/halfmoontabs.css" />
+
+<body>
+
+<h2>1) Example 1</h2>
+
+<p>Note that the CSS for this menu style requires each menu item be wrapped in an additional <span> tag.</p>
+
+<div id="colortab" class="ddcolortabs">
+<ul>
+<li><a href="http://www.dynamicdrive.com" title="Home"><span>Home</span></a></li>
+<li><a href="http://www.dynamicdrive.com/new.htm" title="New"><span>New</span></a></li>
+<li><a href="http://www.dynamicdrive.com/style/" title="CSS" rel="dropmenu1_a"><span>CSS</span></a></li>
+<li><a href="http://www.dynamicdrive.com/resources/" title="Partners" rel="dropmenu2_a"><span>Partners</span></a></li>	
+<li><a href="http://tools.dynamicdrive.com" title="Useful Tools"><span>Tools</span></a></li>	
+</ul>
+</div>
+
+<div class="ddcolortabsline">&nbsp;</div>
+
+
+<!--1st drop down menu -->                                                   
+<div id="dropmenu1_a" class="dropmenudiv_a">
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C1/">Horizontal CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C2/">Vertical CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C4/">Image CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C6/">Form CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C5/">DIVs and containers</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C7/">Links and Buttons</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">Other</a>
+</div>
+
+
+<!--2nd drop down menu -->                                                
+<div id="dropmenu2_a" class="dropmenudiv_a" style="width: 150px;">
+<a href="http://www.cssdrive.com">CSS Drive</a>
+<a href="http://www.javascriptkit.com">JavaScript Kit</a>
+<a href="http://www.codingforums.com">Coding Forums</a>
+<a href="http://www.javascriptkit.com/jsref/">JavaScript Reference</a>
+</div>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("colortab", 3)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<h2>2) Example 2</h2>
+
+<div id="bluemenu" class="bluetabs">
+<ul>
+<li><a href="http://www.dynamicdrive.com">Home</a></li>
+<li><a href="http://www.dynamicdrive.com/style/" rel="dropmenu1_b">CSS</a></li>
+<li><a href="http://www.dynamicdrive.com/resources/" rel="dropmenu2_b">Partners</a></li>
+<li><a href="http://tools.dynamicdrive.com">Tools</a></li>
+</ul>
+</div>
+
+
+
+<!--1st drop down menu -->                                                   
+<div id="dropmenu1_b" class="dropmenudiv_b">
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C1/">Horizontal CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C2/">Vertical CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C4/">Image CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C6/">Form CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C5/">DIVs and containers</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C7/">Links and Buttons</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">Other</a>
+</div>
+
+
+<!--2nd drop down menu -->                                                
+<div id="dropmenu2_b" class="dropmenudiv_b" style="width: 150px;">
+<a href="http://www.cssdrive.com">CSS Drive</a>
+<a href="http://www.javascriptkit.com">JavaScript Kit</a>
+<a href="http://www.codingforums.com">Coding Forums</a>
+<a href="http://www.javascriptkit.com/jsref/">JavaScript Reference</a>
+</div>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("bluemenu")
+</script>
+
+
+
+
+
+
+
+
+
+<h2>3) Example 3</h2>
+
+<p>Note that the CSS for this menu style requires each menu item be wrapped in an additional <span> tag.</p>
+
+<div id="slidemenu" class="slidetabsmenu">
+<ul>
+<li><a href="http://www.dynamicdrive.com" title="Home"><span>Home</span></a></li>
+<li><a href="http://www.dynamicdrive.com/style/" title="CSS Library" rel="dropmenu1_c"><span>CSS</span></a></li>
+<li><a href="http://www.dynamicdrive.com/resources/" title="New" rel="dropmenu2_c"><span>Partners</span></a></li>
+<li><a href="http://tools.dynamicdrive.com" title="Useful Tools"><span>Tools</span></a></li>	
+</ul>
+</div>
+
+<br style="clear: left;" />
+<br class="IEonlybr" />
+
+
+
+<!--1st drop down menu -->                                                   
+<div id="dropmenu1_c" class="dropmenudiv_c">
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C1/">Horizontal CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C2/">Vertical CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C4/">Image CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C6/">Form CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C5/">DIVs and containers</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C7/">Links and Buttons</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">Other</a>
+</div>
+
+
+<!--2nd drop down menu -->                                                
+<div id="dropmenu2_c" class="dropmenudiv_c" style="width: 150px;">
+<a href="http://www.cssdrive.com">CSS Drive</a>
+<a href="http://www.javascriptkit.com">JavaScript Kit</a>
+<a href="http://www.codingforums.com">Coding Forums</a>
+<a href="http://www.javascriptkit.com/jsref/">JavaScript Reference</a>
+</div>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("slidemenu")
+</script>
+
+
+
+
+
+
+
+
+
+<h2>4) Example 4</h2>
+
+<p>Note that the CSS for this menu style requires each menu item be wrapped in an additional <span> tag.</p>
+
+<div id="glowmenu" class="glowingtabs">
+<ul>
+<li><a href="http://www.dynamicdrive.com" title="Home"><span>Home</span></a></li>
+<li><a href="http://www.dynamicdrive.com/style/" title="CSS Library" rel="dropmenu1_d"><span>CSS Codes</span></a></li>
+<li><a href="http://www.dynamicdrive.com/resources/" title="Partners" rel="dropmenu2_d"><span>Partners</span></a></li>
+<li><a href="http://tools.dynamicdrive.com" title="Webmaster Tools"><span>Tools</span></a></li>
+</ul>
+</div>
+<br style="clear: left;" />
+<br class="IEonlybr" />
+
+
+<!--1st drop down menu -->                                                   
+<div id="dropmenu1_d" class="dropmenudiv_d">
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C1/">Horizontal CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C2/">Vertical CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C4/">Image CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C6/">Form CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C5/">DIVs and containers</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C7/">Links and Buttons</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">Other</a>
+</div>
+
+
+<!--2nd drop down menu -->                                                
+<div id="dropmenu2_d" class="dropmenudiv_d" style="width: 150px;">
+<a href="http://www.cssdrive.com">CSS Drive</a>
+<a href="http://www.javascriptkit.com">JavaScript Kit</a>
+<a href="http://www.codingforums.com">Coding Forums</a>
+<a href="http://www.javascriptkit.com/jsref/">JavaScript Reference</a>
+</div>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("glowmenu", "auto")
+</script>
+
+
+
+
+
+
+
+
+
+<h2>5) Example 5</h2>
+
+<div id="moonmenu" class="halfmoon">
+<ul>
+<li><a href="http://www.dynamicdrive.com">Home</a></li>
+<li><a href="http://www.dynamicdrive.com/style/" rel="dropmenu1_e">CSS</a></li>
+<li><a href="http://www.dynamicdrive.com/resources/" rel="dropmenu2_e">Partners</a></li>
+<li><a href="http://tools.dynamicdrive.com/">Tools</a></li>
+</ul>
+</div>
+
+
+<br style="clear: left;" />
+
+
+<!--1st drop down menu -->                                                   
+<div id="dropmenu1_e" class="dropmenudiv_e">
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C1/">Horizontal CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C2/">Vertical CSS Menus</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C4/">Image CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C6/">Form CSS</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C5/">DIVs and containers</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C7/">Links and Buttons</a>
+<a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">Other</a>
+</div>
+
+
+<!--2nd drop down menu -->                                                
+<div id="dropmenu2_e" class="dropmenudiv_e" style="width: 150px;">
+<a href="http://www.cssdrive.com">CSS Drive</a>
+<a href="http://www.javascriptkit.com">JavaScript Kit</a>
+<a href="http://www.codingforums.com">Coding Forums</a>
+<a href="http://www.javascriptkit.com/jsref/">JavaScript Reference</a>
+</div>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("moonmenu", 3)
+</script>
+
+
+</body>
+
+</html>

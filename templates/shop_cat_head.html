@@ -1,0 +1,14 @@
+<script type="text/javascript">
+//<![CDATA[
+	function cartAnzahl(produktid, catid) {
+			MM_goToURL('parent', 'index.php?site=shop&action=addcart&catID=' + catid + '&produktID=' + produktid + '&anzahl=1'); return document.MM_returnValue; 
+	}
+//]]>
+</script>
+<table width="100%" cellpadding="2" cellspacing="0" bgcolor="$border">
+ 	<tr>
+    	<td width="8%" class="title">No.</td>
+    	<td width="62%" class="title">%product%</td>
+        <td width="10%" class="title" align="center">%quantity%</td>
+        <td width="15%" class="title" align="center">%price%</td>
+   	</tr>

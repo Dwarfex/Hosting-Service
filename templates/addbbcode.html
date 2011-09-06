@@ -21,7 +21,7 @@
     </td>
   </tr>
   <tr> 
-    <td><select name="fontcolor" onchange="AddTag('[COLOR=' + this.options[this.selectedIndex].value + ']', '[/COLOR]', '');this.selectedIndex='0';">
+    <td><select name="fontcolor" onchange="AddTag('[COLOR=' + document.getElementById('post').fontcolor.options[document.getElementById('post').fontcolor.selectedIndex].value + ']', '[/COLOR]', '')">
         <option value="0">%color%</option>
         <option value="#87CEEB" style="color:#87CEEB;">%skyblue%</option>
         <option value="#4169E1" style="color:#4169E1;">%royalblue%</option>
@@ -49,7 +49,7 @@
         <option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
       </select> 
 	  
-	  <select name="fontsize" onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']', '[/SIZE]', '');this.selectedIndex='0';">
+	  <select name="fontsize" onchange="AddTag('[SIZE=' + document.getElementById('post').fontsize.options[document.getElementById('post').fontsize.selectedIndex].value + ']', '[/SIZE]', '')">
         <option value="0">%size%</option>
         <option value="1">%tiny%</option>
         <option value="2">%small%</option>
@@ -58,7 +58,7 @@
         <option value="5">%huge%</option>
       </select> 
 	  
-	  <select name="font" onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']', '[/FONT]', '');this.selectedIndex='0';">
+	  <select name="font" onchange="AddTag('[FONT=' + document.getElementById('post').font.options[document.getElementById('post').font.selectedIndex].value + ']', '[/FONT]', '')">
         <option value="0">%font%</option>
         <option value="arial">Arial</option>
         <option value="comic sans ms">Comic</option>
@@ -69,7 +69,7 @@
         <option value="verdana">Verdana</option>
 	  </select> 
 		
-		<select name="align" onchange="AddTag('[ALIGN=' + this.options[this.selectedIndex].value + ']', '[/ALIGN]', '');this.selectedIndex='0';">
+		<select name="align" onchange="AddTag('[ALIGN=' + document.getElementById('post').align.options[document.getElementById('post').align.selectedIndex].value + ']', '[/ALIGN]', '')">
         <option value="0">%align%</option>
         <option value="center">%center%</option>
         <option value="left">%left%</option>

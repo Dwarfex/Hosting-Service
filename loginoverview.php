@@ -45,6 +45,12 @@
 $_language->read_module('loginoverview');
 
 if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
+	
+	if(isset($_GET["action"])) $action=$_GET["action"];
+else $action='';
+
+
+
 
 	eval ("\$title_loginoverview = \"".gettemplate("title_loginoverview")."\";");
 	echo $title_loginoverview;
@@ -210,9 +216,138 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 	else $events='<tr>
 		<td colspan="5" bgcolor="'.$bg1.'"><i>'.$_language->module['no_events'].'</i></td>
 	</tr>';
+    //my hosting projects
+	unset($myhostings);
+	
+	$bg1=BG_1;
+	$bg2=BG_2;
+	$bg3=BG_3;
+	$bg4=BG_4;
+		
+	$myhostings = '';
+	$ergebnis=safe_query("SELECT * FROM `".PREFIX."hosting` WHERE UserID='".$userID."'  ORDER by ProjectID");
+	$anz = mysql_num_rows($ergebnis);
+	if($anz) {
+		$n=1;
+		while($ds=mysql_fetch_array($ergebnis)) {
+			$n%2 ? $bg=BG_1 : $bg=BG_2;
+			//abfrage nach template name 
+			if ($ds['TemplateID'] == 0) { 
+			$Templatename = 'Basic';} else {
+			$ergebnis2=safe_query("SELECT * FROM `".PREFIX."hosting_templates` WHERE TemplateID='".$ds['TemplateID']."'   ");
+			$ds2=mysql_fetch_array($ergebnis2);//$ds2['name']
+			$Templatename = $ds2['name'];
+			}
+			// abfrage nach webspell name
+			
+			$ergebnis3=safe_query("SELECT * FROM `".PREFIX."hosting_wsversion` WHERE WebspellID='".$ds['WebspellID']."'   ");
+			$ds3=mysql_fetch_array($ergebnis3);//$ds3['Name']
+		    if ($ds['installed'] == 0) {
+			 $templaedinstalled = '<a href="hosting_project/admincenter.php?site=hosting&amp;action=edit&amp;projectID='.$ds['ProjectID'].'">'.$_language->module['install'].'</a>';	
+			}else {
+			  $templaedinstalled = '<a href="hosting_project/admincenter.php?site=hosting&amp;action=edit&amp;projectID='.$ds['ProjectID'].'">'.$_language->module['edit'].'</a>';	
+			}
+		
+			
+			$myhostings.='<tr>
+				<td bgcolor="'.$bg.'"><a href="../hosting_projects/'.$ds['subdomain'].'/" style="font-weight:bold;" target="_blank" class="link1">'.htmlspecialchars($ds['ProjectName']).'</a></td>
+				<td bgcolor="'.$bg.'">'.htmlspecialchars($ds3['Name']).'</td>
+				<td bgcolor="'.$bg.'">'.$ds['subdomain'].'</td>
+				<td bgcolor="'.$bg.'">'.htmlspecialchars($Templatename).'</td>
+				<td bgcolor="'.$bg.'">'.$templaedinstalled.'</td>
+				
+				
+				
+				
+			</tr>';
+			$n++;
+		}
+	}
+	else  { $myhostings='<tr>
+		<td colspan="5" bgcolor="'.$bg1.'"><i>'.$_language->module['no_hostings'].'</i></td>
+		</tr>'; }
+		
+	if (!ishostingusr($userID)) {  
+	
+	$hostingactivation = '<tr>
+		<td colspan="5" bgcolor="'.$bg1.'">'.$_language->module['activate_hosting'].'&nbsp;&nbsp;<a href="index.php?site=loginoverview&amp;action=unlockhosting">&raquo;'.$_language->module['click'].'&laquo;</a> </td>
+	</tr>';
+	
+	
+	
+	
+	
+	
+	} else {
+		$count=safe_query("SELECT * FROM ".PREFIX."hosting WHERE UserID=".$userID."");
+	$maxpro=safe_query("SELECT * FROM ".PREFIX."hosting_settings WHERE settingID=1");
+	$maxproj=mysql_fetch_array($maxpro);
+	$maxprojects = $maxproj['maxprojects'];
+	$menge = mysql_num_rows($count);
+	if (!ishostingadmin($userID)){
+	$hostingactivation = '<tr>
+		<td colspan="5" bgcolor="'.$bg1.'">You use '.$menge.' of '.$maxprojects.' available Hosting-Projects</td>
+	</tr>';
+	}else {
+		$hostingactivation = '';
+	}
+	}
+		
+	
+	//end
+	if($action == "unlockhosting") {
+		
+	// mysql query update user set hosting 1 
+	$timestamp = time();
+	$release = mktime(11,10,59,2,24,2011);
+	
+	
+	if (($timestamp > $release) || issuperadmin($userID) ) {
+		safe_query("UPDATE ".PREFIX."user_groups SET hostingusr = '1' WHERE userID='".$userID."'  ");
+		
+	}else {
+		echo '<br /><div class="errorbox"> Public Beta has not started yet. You can not activate hosting now. </div><br />';
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	eval ("\$loginoverview = \"".gettemplate("loginoverview2")."\";");
+	echo $loginoverview;
+	
+	
+	}elseif($action == "lockhosting") {
+		
+	
+	
+	// safe_query("UPDATE ".PREFIX."user_groups SET hostingusr = '0' WHERE userID='".$userID."'  ");
+	
+	/* possibilities for unlocking? 
+	   - delete all Projects ? 
+	   -...
+	*/
+	
+	
+	eval ("\$loginoverview = \"".gettemplate("loginoverview2")."\";");
+	echo $loginoverview;
+	
+	}else{
+		
+		
+	
+	
 
+	
+	
 	eval ("\$loginoverview = \"".gettemplate("loginoverview")."\";");
 	echo $loginoverview;
+
+	}
 }
 else echo $_language->module['you_have_to_be_logged_in'];
 

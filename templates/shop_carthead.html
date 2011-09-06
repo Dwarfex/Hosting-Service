@@ -1,0 +1,20 @@
+<script type="text/javascript">
+//<![CDATA[
+	function cartThisAnzahl(produktid, anzahl, id) { 
+			MM_goToURL('parent', 'index.php?site=shop&action=editcart&produktID=' + produktid + '&anzahl=' + anzahl +'&id=' + id); 
+			return document.MM_returnValue; 
+	}
+//]]>
+</script>
+<br />
+<table width="100%" cellpadding="2" cellspacing="0" bgcolor="$border">
+ 	<tr>
+  		<td colspan="5" class="title">%cart%</td>
+ 	</tr>
+	<tr>
+    	<td width="20" bgcolor="$pagebg">&nbsp;</td>
+    	<td width="10%" bgcolor="$pagebg"><b>%quantity%</b></td>
+     	<td bgcolor="$pagebg"><b>%product%</b></td>
+     	<td width="20%" bgcolor="$pagebg" align="center"><b>%unit_price%</b></td>
+        <td width="15%" bgcolor="$pagebg" align="center"><b>%price%</b></td>
+    </tr>

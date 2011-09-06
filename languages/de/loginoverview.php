@@ -86,6 +86,16 @@ $language_array = Array(
 	'x_new_message'=>'Du hast %new_messages% neue Nachrichten.',
 	'you_have_to_be_logged_in'=>'Du musst eingeloggt sein um diese Seite zu betrachten!<br /><br />
 	 &#8226; <a href="index.php?site=register">Jetzt registrieren</a><br />
-	 &#8226; <a href="index.php?site=login">einloggen</a>'
+	 &#8226; <a href="index.php?site=login">einloggen</a>',
+	 'myhosting'=>'Meine Hosting-Projekte',
+	 'wsversion'=>'Webspell Version',
+	 'subdomain'=>'Subdomain',
+	 'templatename'=>'Template Name',
+	 'action'=>'Aktion',
+	 'no_hostings'=>'Keine Hosting Projekte',
+	 'activate_hosting'=>'Aktiviere die Hosting Funktion hier:',
+	 'activated_hosting'=>'Hosting ist bei Ihnen aktiviert.',
+	 'install'=>'Installieren',
+	 'edit'=>'&auml;ndern'
 );
 ?>

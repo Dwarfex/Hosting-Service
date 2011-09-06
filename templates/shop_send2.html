@@ -1,0 +1,80 @@
+<script type="text/javascript">
+function formCheck() {
+	if (document.send.firstname.value == "") {
+		alert('%enter_firstname%');
+		document.send.firstname.focus();
+		return false;
+	}
+	else if (document.send.lastname.value == "") {
+		alert('%enter_lastname%');
+		document.send.lastname.focus();
+		return false;
+	}
+	else if (document.send.email.value == "") {
+		alert('%enter_mail%');
+		document.send.email.focus();
+		return false;
+	}
+	else if (document.send.plz.value == "") {
+		alert('%enter_postcode%');
+		document.send.plz.focus();
+		return false;
+	}
+	else if (document.send.town.value == "") {
+		alert('%enter_town%');
+		document.send.town.focus();
+		return false;
+	}
+	else if (document.send.street.value == "") {
+		alert('%enter_street%');
+		document.send.street.focus();
+		return false;
+	}
+	else if (document.send.hn.value == "") {
+		alert('%enter_housenum%');
+		document.send.hn.focus();
+		return false;
+	}
+	else if (document.send.telefon.value == "") {
+		alert('%enter_phone%');
+		document.send.telefon.focus();
+		return false;
+	}
+	else
+		return true;
+}
+</script>
+<div style="text-align:left">
+<form id="sendform" action="index.php?site=shop" name="send" enctype="multipart/form-data" method="post" onSubmit="return formCheck();">
+<fieldset>
+            <legend>%your_infos%</legend>
+            $anschrift
+</fieldset>
+<fieldset>
+            <legend>%ship_adress%</legend><br />
+            <label for="NameLastname">%country%:</label><br />
+			<select name="countryl" id="countryl">$countries</select><br />
+			<label for="Company">%postcode%:</label><br />
+            <input name="plzl" type="text" id="plzl" /><br />
+            <label for="Company">%city%:</label><br />
+            <input name="streetl" type="text" id="streetl" size="31" /><br />
+            <label for="Company">%street%:</label><br />
+            <input name="streetl" type="text" class="form_off" size="31" /><br />
+            <label for="Company">%housenum%:</label><br />
+            <input name="hnl" type="text" size="4" />
+</fieldset>
+<fieldset>
+            <legend>%order_confirm%</legend>
+            $produkte2
+            <hr / style="border:0; background-color:$border; color:$border;"> 
+            $gesamt2
+</fieldset>
+<fieldset>
+            <legend>%checkout%</legend>
+            <label for="NameLastname">%notice%</label>
+			<textarea name="bemerkung" cols="57" rows="4"></textarea>
+</fieldset>
+<p>
+            <input name="send" type="submit" id="send" value='%submit_order%' />
+</p>
+</form>

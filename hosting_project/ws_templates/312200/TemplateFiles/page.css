@@ -1,0 +1,75 @@
+body { font: normal 11px Verdana; color:#000000; background-color:#595959; margin:0px; padding:0px; }
+
+#container { background-image:url(styles/bg.jpg); background-repeat:repeat-y; background-position:top center; width:100%; margin:auto; }
+
+#page { width:868px; height:auto; margin:auto; }
+#head { width:868px; height:146px; }
+#header { background-image:url(styles/header/header.jpg); width:628px; height:146px; float:left; }
+#loginsection { width:194px; height:146px; float:left; } 
+#logintop { background-image:url(styles/header/logintop.jpg); padding-left:148px; padding-top:7px; width:46px; height:14px; }
+#loginbg { background-image:url(styles/header/loginbg.jpg); width:194px; height:103px; }
+#loginbottom { background-image:url(styles/header/loginbottom.jpg); width:194px; height:22px; }
+#headend { background-image:url(styles/header/headendrechts.jpg); width:46px; height:146px; float:left; }
+
+/*---->NAVI<-----*/
+#navi    { width:868px; height:25px; }
+#navi ul { width:auto; padding:0px; margin:0px; list-style-type:none; }
+#navi li { list-style-type:none; float:left; }
+#navistart { background-image:url(styles/navi/navistartleft.jpg); width:12px; height:25px; }
+.menu1 { background-image:url(styles/navi/navibg1.jpg); width:105px; height:25px; color:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; line-height:25px; text-align:center; font-weight:bold; }
+.menu1 a { color:#fff; text-decoration:none; } 
+.menu1 a:visited { color:#fff; text-decoration:none; } 
+.menu1 a:active { color:#fff; text-decoration:none; } 
+.menu1 a:hover { color:#44a7ce; text-decoration:none; }
+.menu2 { background-image:url(styles/navi/navibg2.jpg); width:105px; height:25px; color:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; line-height:25px; text-align:center; font-weight:bold; } 
+.menu2 a { color:#fff; text-decoration:none; }
+.menu2 a:visited  { color:#fff; text-decoration:none; } 
+.menu2 a:active { color:#fff; text-decoration:none; } 
+.menu2 a:hover { color:#44a7ce; text-decoration:none; }
+#naviend { background-image:url(styles/navi/naviendrechts.jpg); width:16px; height:25px; }
+
+/*---->CONTENT<----*/
+#pagepuffer { background-image:url(styles/pagepuffer.jpg); width:868px; height:auto; }
+#left { width:629px; height:auto; float:left; }
+#contentbalken { background-image:url(styles/contentbalken.jpg); width:611px; padding-left:18px; padding-top:4px; height:16px; color:#fff; }
+#content { width:625px; padding-left:2px; padding-right:2px; height:auto; }
+#right { width:239px; height:auto; float:left; }
+#sliderbalken { background-image:url(styles/rightnavi/balkenoben.jpg); width:224px; padding-left:15px; padding-top:4px; height:16px; color:#fff; }
+#footer { background-image:url(styles/foot.jpg); width:880px; height:6px; margin:auto; }
+
+/*---->SLIDER<----*/
+.sliderwrapper { position:relative; overflow:hidden; border:0px; width:239px; height:81px; }
+.sliderwrapper .contentdiv { visibility:hidden; position:absolute; left:0; top:0; padding:0px; width:239px; height:81px; }
+.pagination { visibility:hidden; }
+
+/*------->MENU<-------*/
+.menu { width:239px; overflow:hidden; }
+.menuhead { background:url(styles/rightnavi/balken.jpg) no-repeat; width:224px; height:17px; background-color:inherit; color:#fff; font-size:11px; margin:0px; padding-left:15px; padding-top:3px; }
+.menu ul { list-style: none; padding:0px; margin:0px; }
+.menu ul li { margin:0px; padding:4px 0px 4px 20px; }
+
+#pageend { background-image:url(styles/pageend.jpg); width:868px; height:9px; overflow:hidden; }
+
+/*------->LOGIN<-------*/
+.logingesamt { width:auto; height:auto; padding-top:19px; text-align:center; }
+.loginuser { width:auto; height:15px; margin-bottom:6px; }
+.loginpass { width:auto; height:15px; }
+
+/*------->NEWS<-------*/
+.newsgesamt { background-color:#dfdfde; width:625px; height:auto; }
+.newspic { width:135px; height:auto; text-align:center; padding-top:5px; float:left; }
+.newsright { width:480px; padding-left:5px; padding-right:5px; height:auto; float:left; }
+.newsheadline { width:480px; height:15px; padding-top:5px; font-weight:bold; }
+.newsline{ width:480px; height:1px; background-color:#000002; overflow:hidden; }
+.newscontent { width:480px; height:auto; padding-bottom:2px; text-align:justify; }
+.newsdate { width:480px; height:18px; padding-top:2px; }
+.newsend { width:625px; height:1px; background-color:#cac6c6; overflow:hidden; }
+
+/*------->FOOTER<-------*/
+.footext { text-align:center; color:#fff; margin-bottom:10px; }
+.footext a { color:#ccc; text-decoration:none; }
+.footext a:visited { color:#ccc; text-decoration:none; }
+.footext a:active { color:#ccc; text-decoration:none; }
+.footext a:hover { color:#3172B3; text-decoration:none; }
+
+.clear { clear:both; }

@@ -47,6 +47,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin'=>'admin',
+	'hosting'=>'my hosting-projects',
 	'buddy_list'=>'buddy list',
 	'cash-box'=>'cash-box',
 	'edit_account'=>'edit account',

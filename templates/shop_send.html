@@ -1,0 +1,137 @@
+<script type="text/javascript">
+function formCheck() {
+	if (document.send.firstname.value == "") {
+		alert('%enter_firstname%');
+		document.send.firstname.focus();
+		return false;
+	}
+	else if (document.send.lastname.value == "") {
+		alert('%enter_lastname%');
+		document.send.lastname.focus();
+		return false;
+	}
+	else if (document.send.email.value == "") {
+		alert('%enter_mail%');
+		document.send.email.focus();
+		return false;
+	}
+	else if (document.send.plz.value == "") {
+		alert('%enter_postcode%');
+		document.send.plz.focus();
+		return false;
+	}
+	else if (document.send.town.value == "") {
+		alert('%enter_town%');
+		document.send.town.focus();
+		return false;
+	}
+	else if (document.send.street.value == "") {
+		alert('%enter_street%');
+		document.send.street.focus();
+		return false;
+	}
+	else if (document.send.hn.value == "") {
+		alert('%enter_housenum%');
+		document.send.hn.focus();
+		return false;
+	}
+	else if (document.send.telefon.value == "") {
+		alert('%enter_phone%');
+		document.send.telefon.focus();
+		return false;
+	}
+	else
+		return true;
+}
+</script>
+
+<form action="index.php?site=shop" name="send" enctype="multipart/form-data" method="post" onSubmit="return formCheck();">
+<div style=" text-align: inherit;">
+<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="$border">
+      <tr>
+        <td class="title" height="17">%submit_order%</td>
+      </tr>
+      <tr>
+      	<td>$anschrift</td>
+      </tr>
+      <tr>
+      	<td colspan="2" bgcolor="$pagebg" height="17"><strong>%ship_adress%</strong></td>
+      </tr>
+      <tr>
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+                  <tr>
+                    <td width="23%" bgcolor="$bg1">%country%:</td>
+                    <td bgcolor="$bg1"><select name="countryl" id="countryl">$countries</select></td>
+                  </tr>
+                  <tr>
+                    <td width="23%" bgcolor="$bg2">%postcode%:</td>
+                    <td bgcolor="$bg2"><input name="plzl" type="text" class="form_off" id="plzl" /></td>
+                  </tr>
+                  <tr>
+                    <td width="23%" bgcolor="$bg1">%city%:</td>
+                    <td bgcolor="$bg1"><input name="townl" type="text" class="form_off" id="townl"size="30" /></td>
+                  </tr>
+                  <tr>
+                    <td width="23%" bgcolor="$bg2">%street%:</td>
+                    <td bgcolor="$bg2"><input name="streetl" type="text" class="form_off" id="streetl" size="31" /></td>
+                  </tr>
+                  <tr>
+                    <td width="23%" bgcolor="$bg1">%housenum%:</td>
+                    <td bgcolor="$bg1"><input name="hnl" type="text" class="form_off" id="hnl" size="4" /></td>
+                  </tr>
+                  <tr>
+            	  	<td width="20%" bgcolor="$bg2">%phone%:*</td>
+                  	<td bgcolor="$bg2"><input type="text" name="telefon" /></td>
+          		  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td class="title" height="17"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40%">%product%</td>
+            <td width="20%">%quantity%</td>
+            <td width="20%">%price%</td>
+			<td width="20%">%total_price%</td>
+          </tr>
+          </table>
+          </td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>$produkte</td>
+          </tr>
+          </table>
+          </td>
+      </tr>
+      <tr>
+        <td>$gesamt</td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td width="20%" bgcolor="$bg1">%notice%</td>
+            <td bgcolor="$bg1"><textarea name="bemerkung" cols="57" rows="4"></textarea></td>
+          </tr>
+          <tr>
+            <td width="20%" bgcolor="$bg2">&nbsp;</td>
+            <td bgcolor="$bg2"><input name="send" type="submit" value="%submit_order%" /><br /> 
+    %req_field%</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+</form>

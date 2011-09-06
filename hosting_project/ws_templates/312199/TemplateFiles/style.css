@@ -1,0 +1,235 @@
+/* ======== BODY =======================================================================================================================*/
+body {margin:0px; background-color:#696969; background-image:url(img/bgmain.jpg); background-position:top; background-repeat:repeat-x;}
+#content {width:995px;}	
+#content_links {width:183px; margin-right:2px; background-image:url(img/navileft_bg.jpg); float:left;}
+#content_mitte {width:577px; margin-right:2px; float:left;}
+#content_rechts {width:231px; background-image:url(img/naviright_bg.jpg); float:left;}	
+.mainfont {font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF;}
+.footer {background-image:url(img/footer.jpg); height:21px; width:995px; text-align:center; padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#333333;}
+/* ======== BODY ENDE ==================================================================================================================*/
+
+/* ======== HEAD =======================================================================================================================*/
+#header {height:190px; width:995px;}
+.header_01 {width:995px; height:31px; background-image:url(img/head_01.jpg);}
+.header_02 {width:995px; height:119px; background-image:url(img/head_02.jpg);}
+.header_03 {width:995px; height:40px; background-image:url(img/head_03.jpg);}
+/* ======== HEAD ENDE ==================================================================================================================*/
+
+/* ======== LOGIN =======================================================================================================================*/
+.login_menu {float:left; margin-right:2px; padding-top:2px; text-align:center; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; background-image:url(img/loginmenu.png); height:16px; width:126px;}
+.login_menu_2 {float:left; margin-right:2px; padding-top:2px; text-align:center; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; background-image:url(img/loginmenu_2.png); height:16px; width:180px;}
+.login_menu_3 {float:left; margin-right:2px; padding-top:2px; text-align:center; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; background-image:url(img/loginmenu_3.png); height:16px; width:151px;}
+/* ======== LOGIN =======================================================================================================================*/
+
+
+/* ======== HORZNAV ====================================================================================================================*/
+.header_01_left {width:250px; float:left; color:#005480; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;}
+.header_01_right {width:745px; float:left;}
+
+.header_03_right {width:200px; float:left; color:#005480; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;}
+.header_03_left {width:795px; float:left;}
+/* ======== HORZNAV ENDE ===============================================================================================================*/
+
+/* ======== BOXENSTYLE ANFANG ===============================================================================================================*/
+.lastnews {width: 275px; height:20px; background-image:url(img/boxbutton.jpg); padding-top:7px; text-indent:23px; margin-bottom:1px; margin-left:6px;}
+.lastnews_head {width: 275px; height:14px; border-bottom:1px dashed #003451; margin-top:3px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#003451; font-weight:bold; text-align:left; margin-left:8px; margin-bottom:2px; }
+/* ======== BOXENSTYLE ENDE ===============================================================================================================*/
+
+/* ======== NAVI_LEFT ==================================================================================================================*/ 
+#boxes_l{width:183px; text-align:left; clear:none; 	vertical-align:top;} 
+#boxes_r{width:231px; text-align:left; clear:none; 	vertical-align:top;}
+#boxes_m{width:183px; text-align:left; clear:none; 	vertical-align:top;} 
+ 
+.top{width:183px; height:20px; background-image:url(img/box_head.jpg); font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;  text-align:left; text-indent:24px; vertical-align:top; color:#005480; padding-top:7px;} 
+.top_r{width:231px; height:20px; background-image:url(img/box_head_r.jpg); font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;  text-align:left; text-indent:24px; vertical-align:top; color:#005480; padding-top:7px;} 
+.top_m{width:183px; height:20px; background-image:url(img/box_head_m.jpg); font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;  text-align:left; text-indent:24px; vertical-align:top; color:#005480; padding-top:7px;} 
+.input{padding-left:0px; padding-top:0px;} 
+.box_inhalt{width:165px; margin:4px; padding: 3px; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align:left; background-color:#ebebeb; border:solid 1px #dfdfdf;}
+.box_inhalt_r{width:213px; margin-left:6px; margin-bottom:4px; margin-right:2px; margin-top:4px; padding: 3px; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align:left; background-color:#ebebeb; border:solid 1px #dfdfdf;}
+.box_inhalt_m{width:167px; margin:4px; padding: 3px; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align:left; background-color:#ebebeb; border:solid 1px #dfdfdf;}
+
+.navi_horz {text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:10px; padding-top:5px; height:14px; margin-top:21px; margin-left:4px; color:#FFFFFF; width:71px; background-image:url(img/navi_norm.png); float:left;}
+
+.navi_horz:hover {text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:10px; font-weight:bold; padding-top:5px; height:14px; margin-top:21px; margin-left:4px; color:#FFFFFF; width:71px; background-image:url(img/navi_norm_hover.png); float:left;}
+/*.com_menu ul{padding:0px; margin:0px; margin-bottom:0px; list-style-type:none;	}
+.com_menu li{margin:0px; padding:0px; margin-bottom:0px;  list-style-type:none;} 
+.com_menu li ul	{margin-bottom:0px; padding:0px; margin:0px;}
+.com_menu li li	{margin-bottom:0px; padding:0px; margin:0px; margin-top:0px;} 	
+.com_menu li a{margin-bottom:0px;  display:block; margin:0px; padding-top:1px; width:180px; height:21px; color:#FFFFFF; text-indent:24px; font-size:11px; font-family:	 Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none; line-height:21px; background-image:url(img/navi.jpg);} 	
+.com_menu li a:hover{margin-bottom:0px;  display:block; margin:0px; padding-top:1px; width:180px; height:21px; color:#FFFFFF; text-indent:24px; font-size:11px; font-family:	 Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none; line-height:21px; background-image:url(img/navi_hover.jpg);} 	
+.com_menu li li a{margin-bottom:0px;  display:block; margin:0px; padding-top:1px; width:180px; height:21px; color:#FFFFFF; text-indent:27px; font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none; line-height:21px; background-image:url(img/navi2.jpg);} 	
+.com_menu li li a:hover{	margin-bottom:0px;  display:block; margin:0px; padding-top:1px; width:180px; height:21px; color:#FFFFFF; text-indent:27px; font-size:10px; font-family:	 Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none; line-height:21px; background-image:url(img/navi2_hover.jpg);}*/
+/*.box_r {width:232px; padding:0px; border:solid 1px #333333; color:#000000; font-size:12px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; text-decoration:none;}  
+.box_c {width:530px; padding:0px; border:solid 1px #333333; color:#000000; font-size:12px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; text-decoration:none;} 	 
+.left{	float:left;}  */
+/* ======== NAVI_LEFT ENDE =============================================================================================================*/	
+
+/* ======== CONTENT ====================================================================================================================*/
+.content_mitte_oben {width:577px; background-color:#829798;}
+.content_mitte_unten {width:577px;}
+.content_mitte_oben_links {width:287px; height:166px; margin-right:3px; background-image:url(img/headbox.jpg); float:left;}
+.content_mitte_oben_rechts {width:287px; height:166px; background-image:url(img/headbox.jpg); float:left;}
+/*.content_mitte_unten_links {width:389px; padding:5px; margin-right:3px; border-left:solid 1px #c4d8e2; border-right:solid 1px #c4d8e2; float:left; background-color:#FFFFFF;}
+.content_mitte_unten_rechts {width:183px; border-left:solid 1px #c4d8e2; border-right:solid 1px #c4d8e2; float:left; background-color:#FFFFFF;}
+
+/* ======== CONTENT ENDE ===============================================================================================================*/
+
+/* ======== WEBSPELL =======================================================================================================================*/
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+
+    scrollbar-base-color:#cccccc;
+    scrollbar-3dlight-color:#333333;
+    scrollbar-arrow-color:#333333;
+    scrollbar-darkshadow-color:#333333;
+    scrollbar-face-color:#cccccc;
+    scrollbar-highlight-color#cccccc;
+    scrollbar-shadow-color:#cccccc;
+    scrollbar-track-color:#cccccc; 
+}
+
+table {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #000000;
+}
+h2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.small {  
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 9px; 
+    color: #000000;
+}
+
+.title {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #000000;
+    font-weight: bold;
+    background-image: url(images/title_bg.gif);
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+.category_big {  
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px; 
+    color: #000000; 
+    font-weight: bold; 
+}
+
+.category {  
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px; 
+    color: #000000; 
+    font-weight: normal; 
+}
+
+.marked {
+    background-color: #000000;
+    font-weight: bold;
+}
+
+a, a:visited, a:active {
+    color: #333333;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+a.titlelink, a.titlelink:visited, a.titlelink:active {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.titlelink:hover {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a.category, a.category:visited, a.category:active {
+    color: #333333;
+    text-decoration: none;
+}
+
+a.category:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+option, textarea, input, select, file {  
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+    color: #000000; 
+    background-color: #FFFFFF; 
+    border: 1px solid #333333;
+}
+
+.footer {color: #FFFFFF
+	  size: 10px
+			}
+			
+.form_off {  
+    color: #666666; 
+    background-color: #DCDCDC; 
+    border: 1px solid #666666;
+}
+
+.form_on {  
+    color: #000000; 
+    background-color: #EEEEEE; 
+    border: 1px solid #000000;
+}
+
+.form_username {
+    background-color: #eeeeee;
+    border: 1px solid #333333;
+    background-image: url(images/username.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.form_password {
+    background-color: #eeeeee;
+    border: 1px solid #333333;
+    background-image: url(images/password.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.form_name {
+    background-color: #eeeeee;
+    border: 1px solid #333333;
+    background-image: url(images/name.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.form_text {
+    background-color: #eeeeee;
+    border: 1px solid #333333;
+    background-image: url(images/message.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.input { 
+    background-color: transparent; 
+    border: 1px none; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

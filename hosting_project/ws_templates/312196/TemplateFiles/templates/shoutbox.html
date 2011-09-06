@@ -1,0 +1,32 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function chkFormularShoutBox() {
+	if(document.getElementById('shoutbox_name').value == ""){
+		alert('%enter_name%');
+		document.getElementById('shoutbox_name').focus();
+		return false;
+	}
+	if(document.getElementById('shoutbox_message').value == "" || document.getElementById('shoutbox_message').value == "Message"){
+		alert('%enter_message%');
+		document.getElementById('shoutbox_message').focus();
+		return false;
+	}
+	return true;
+}
+-->
+</script>
+<form name="shout" method="post" action="index.php?site=shoutbox_content&amp;action=save" onsubmit="return chkFormularShoutBox()">
+<script language="JavaScript" type="text/javascript">
+<!--
+fetch('shoutbox_content.php', 'shoutbox', 'replace', 'time', $refresh);
+-->
+</script>
+<div id="shoutbox" style="width:100%; overflow:hidden; text-align:left;"></div>
+<div style="text-align:center;">
+<input type="text" id="shoutbox_name" name="name" size="24" maxlength="255" style="margin: 2px;" $name_settings /><br />
+<input type="text" id="shoutbox_message" name="message" size="24" maxlength="255" style="margin: 2px;" value="Message" onfocus="this.value=''" /><br />
+$captcha_form
+<div style="padding:2px;"><a href="javascript:if(chkFormularShoutBox())+document.shout.submit();"><img src="styles/spaltelinks/shout.jpg" width="82" height="12" border="0" alt="shout" /></a></div>
+</div>
+</form>

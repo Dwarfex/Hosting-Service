@@ -1,4 +1,5 @@
 <?php
+
 /*
 ##########################################################################
 #                                                                        #
@@ -10,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2009 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,104 +46,85 @@
 include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
+include("_referer.php");
 
 $_language->read_module('index');
 $index_language = $_language->module;
-
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="copyright" content="Copyright &copy; 2005 - 2011 by wemake-it.de" />
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Website using webSPELL 4 CMS - Society Edition" />
-	<meta name="author" content="webspell.org" />
-	<meta name="keywords" content="webspell, webspell4, clan, cms, society, edition" />
-	<meta name="copyright" content="Copyright &copy; 2005 - 2009 by webspell.org" />
+	<meta name="description" content="Webspell-Cms.org - Webspell hosting service" />
+	<meta name="author" content="WeMake-IT" />
+	<meta name="keywords" content="wemake, it, service, support, society, version, Henrik Oelze, Oelze, Henrik, Design, Support, 4.2, webspell, webspellSE, clan, cms, Society, hosting, free, free hosting, 4.2.2, template" />
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell-cms.org" />
 	<meta name="generator" content="webSPELL" />
-	<title><?php echo PAGETITLE; ?></title>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
-	<!--[if IE]>
-	<style type="text/css">
-	.td1 {  height: 18px; }
-	.td2 {  height: 18px; }
-	div#content .col2 { width: 74%; }
-	div#content .col3 { width: 19%; }
-	hr.grey { margin: 3px 0 3px 0; }
-	</style>
-	<![endif]-->
-	<!--[if lte IE 7]>
-	<style type="text/css">
-	hr.grey { margin: 3px 0 -3px 0; }
-	</style>
-	<![endif]-->
-	<!--[if gte IE 8]>
-	<style type="text/css">
-	hr.grey { margin: 3px 0 3px 0;}
-	</style>
-	<![endif]-->
-	<script src="js/bbcode.js" language="JavaScript" type="text/javascript"></script>
-</head>
+<title><?php echo PAGETITLE; ?></title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href="design/css/layout.css" rel="stylesheet" />
+<link href="design/css/ddcolortabs.css" rel="stylesheet" />
+<link href="_stylesheet.css" rel="stylesheet" />
+
+
+
+<script src="js/bbcode.js" language="JavaScript" type="text/javascript"></script>
+<script src="design/css/dropdowntabs.js" language="JavaScript" type="text/javascript"></script>
+
+
+
+</head> <!-- Remind:! NO CHANGES HERE !!!!! -->
+
 <body>
-<table border="0" cellpadding="0" cellspacing="0" width="1000" align="center">
-  <tr>
-    <td colspan="7" id="head" valign="top">
-    	<div style="height: 15px; margin: 0px; margin-top: 4px; padding: 0px; padding-left: 4px; padding-right: 4px; text-align: left; width: 992px;"><?php include('sc_scrolltext.php'); ?></div>
-	    <div style="float: left; margin: 0px; padding: 0px; padding-left: 57px; padding-top: 22px; text-align: left; width: 443px; font-size: 22px; color: #F2F2F2;"><?php echo $myclanname; ?></div>
-	    <div style="margin: 0px; padding: 0px; margin-top: 7px; text-align: center; width: 500px; float: right;">
-	      <?php include('sc_bannerrotation.php'); ?>
-	    </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="7"><img src="images/2.jpg" width="1000" height="5" border="0" alt="" /></td>
-  </tr>
-  <tr>
-    <td style="background-image:url(images/3.jpg);" width="5" valign="top"></td>
-    <td bgcolor="#f2f2f2" width="202" valign="top">
-	    <div class="menu">
-	      <?php include("navigation.php"); ?>
-	      <?php boxinclude(1); ?>
+<div id="holder">
+<div class="line"></div>
+<div id="main">
+  <div id="top"> 
+   <?php include("login_top.php"); ?>
+  </div>
+  <div id="header"></div>
+  <div id="navi">
+  <div id="home">
+  <a href="index.php" style="font-size:15px; font-weight:bold; color:#9aa2a3">HOME</a>
+  </div>
+  <div id="navidrop">
+  
+ <?php include("navigation1.php"); ?>
+  <?php include("navigation2.php"); ?>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("colortab", 1)
+</script>
+
+
+  
+  <!--- --->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    </div>
+  </div>
+  
+  <div id="content_holder">
+  <div id="content_left">
+  
+  <div >
+  	<?php boxinclude(1); ?>
 				<?php boxinclude(2); ?>
 				<?php boxinclude(3); ?>
 				<?php boxinclude(4); ?>
 				<?php boxinclude(5); ?>
-	    </div>
-    </td>
-    <td bgcolor="#2a2a2a" width="2" valign="top"></td>
-    <td bgcolor="#ffffff" width="582" valign="top">
-    <div class="pad">
-     <?php
-			if((!isset($site)) || $site=='') $site="news";
-			
-			$checkmodul=safe_query("SELECT `activated`, `access` FROM ".PREFIX."modules WHERE `filename`='".$site.".php'");
-			$modulfound=mysql_num_rows($checkmodul);
-			if($modulfound){
-				$modulrow=mysql_fetch_array($checkmodul);
-			  if($modulrow['activated']==1){
-			  	if(hasaccess($modulrow['access'], $useraccessgroups)){
-						$invalide = array('\\','/','/\/',':','.');
-						$site = str_replace($invalide,' ',$site);
-						if(!file_exists($site.".php")) $site = "news";
-						include($site.".php");
-			  	}
-			  	else{
-			  		echo '<br />'.$index_language['access_denied'];
-			  	}
-			  }
-			  else{
-			  	echo '<br />'.$index_language['mod_deactivated'];
-			  }
-			}
-			else{
-				echo '<br />'.$index_language['mod_not_available'];
-		  }
-		 	?>
-    </div>
-    </td>
-    <td bgcolor="#2a2a2a" width="2" valign="top"></td>
-    <td bgcolor="#f2f2f2" width="202" valign="top">
-      <div class="menu">
-	      <?php boxinclude(6); ?>
+                <?php boxinclude(6); ?>
 				<?php boxinclude(7); ?>
 				<?php boxinclude(8); ?>
 				<?php boxinclude(9); ?>
@@ -167,14 +149,29 @@ $index_language = $_language->module;
 				<?php boxinclude(28); ?>
 				<?php boxinclude(29); ?>
 				<?php boxinclude(30); ?>
-	    </div>
-    </td>
-    <td style="background-image:url(images/4.jpg);" width="5" valign="top"></td>
-  </tr>
-  <tr>
-   <td colspan="7"><img src="images/5.jpg" width="1000" height="7" border="0" alt="" /></td>
-  </tr>
-</table>
-<center><br style="line-height:2px;" />Copyright by <b><?php echo $myclanname ?></b>&nbsp; | &nbsp;CMS powered by <a href="http://www.webspell.org" target="_blank"><b>webSPELL.org</b></a> Society Edition&nbsp; | &nbsp;<a href="http://validator.w3.org/check?uri=referer" target="_blank">XHTML 1.0</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/refer" target="_blank">CSS 2.1</a> valid W3C standards&nbsp; | &nbsp;<a href="tmp/rss.xml" target="_blank"><img src="images/icons/rss.png" width="16" height="16" style="vertical-align:bottom;" alt="" /></a> <a href="tmp/rss.xml" target="_blank">RSS Feed</a></center>
+                <?php boxinclude(31); ?>
+                <?php boxinclude(32); ?>
+                <?php boxinclude(33); ?>
+                <?php boxinclude(34); ?>
+                <?php boxinclude(35); ?>
+                <?php boxinclude(36); ?>
+                <?php boxinclude(37); ?>
+                <?php boxinclude(38); ?>
+                <?php boxinclude(39); ?></div></div>
+  <div id="content_right">  <?php if($site=="news" || $site=='' || $site=="404" || $site=="news_comments") { ?>
+            <?php include("content1.php"); ?>
+ 
+
+<?php } else { ?>
+
+<?php include("content2.php"); ?>
+<?php } ?></div>
+  
+  
+  </div>
+  <div id="footer"> </div>
+</div>
+<div class="line"></div>
+</div>
 </body>
 </html>

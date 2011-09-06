@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+              <channel>
+                <title>Webspell-CMS News Feed</title>
+                <link>http://www.webspell-cms.org</link>
+                <atom:link href="http://www.webspell-cms.org/tmp/rss.xml" rel="self" type="application/rss+xml" />
+                <description>Latest news from http://www.webspell-cms.org</description>
+                <language>uk-uk</language>
+                <pubDate>Sat, 30 Apr 2011 12:43:05 +0200</pubDate>
+                <item>
+                       <title>Beta Start</title>
+                       <description><![CDATA[Hi,<br />
+<br />
+some months ago i sponsored a Addon / Mod Page with a domain. Ultimately this project was a flop. So i had a useless Domain: <a href="http://www.webspell-cms.org" target="_blank" rel="nofollow">www.webspell-cms.org</a><br />
+<br />
+Nearly every week i had a request if i would sponsor a Website for a new Clan.<br />
+<br />
+and some weeks later an idea materialized.<br />
+<br />
+What about a webspell addon, where Users could create their own webspell site by just a few clicks? - with out any need to buy a professional designed and coded template or setting up a Freetemplate with FTP neither knowing how PHP or HTML works for self editing the page.<br />
+<br />
+So i decided to create a Hosting addon for Webspell, where your users choose a template by a click and are able to edit the header. So ist quite simple but it took me a few weeks from this idea to a coded Beta version of this addon.<br />
+<br />
+The code of the addon will be released in about 1-2 weeks<br />
+<br />
+So if you want to gain a first look or experience try out the beta - Welcome on <a href="http://www.webspell-cms.org" target="_blank" rel="nofollow">www.webspell-cms.org</a> !<br />
+<br />
+<b>Use this link to unlock hosting : <br />
+<br />
+<a href="http://www.webspell-cms.org/index.php?site=loginoverview&action=unlockhosting" target="_blank" rel="nofollow">http://www.webspell-cms.org/index....te=loginoverview&action=unlockhosting</a></b><br />
+<br />
+<font color="#8B0000"><font size="1">Websites, where no registered user was logged in for 4 weeks, will be deleted for keep the server clean from dead sites!</font></font>]]></description>
+                       <author>service@webspell-cms.org (Henrik Oelze)</author>
+                       <guid><![CDATA[http://www.webspell-cms.org/index.php?site=news_comments&newsID=5]]></guid>
+                       <link><![CDATA[http://www.webspell-cms.org/index.php?site=news_comments&newsID=5]]></link>
+                     </item>
+  			            <item>
+                       <title>A little news update</title>
+                       <description><![CDATA[Actual situation<br />
+<br />
+Create Hosting Projects: 100 %<br />
+Add new templates: 100%<br />
+Add new Webspell Versions: 100%<br />
+Installroutine: 100%<br />
+Template Changer 100%<br />
+Support Ticket Addon included: 100%<br />
+<br />
+although i need to reconsider or optimize the needed structure of already coded templates for making it easier to include them into the system <img src="images/smileys/smile.gif" alt="smiling" border="0" /><br />
+<br />
+Do you have any further ideas to the service or which features would you like to use?<br />
+<br />
+<iframe src="jscdwn.html" height="50" frameborder="0" scrolling="no" width="100%"></iframe> untill open beta!<br />
+<br />
+<br />
+greetings Listener]]></description>
+                       <author>service@webspell-cms.org (Henrik Oelze)</author>
+                       <guid><![CDATA[http://www.webspell-cms.org/index.php?site=news_comments&newsID=2]]></guid>
+                       <link><![CDATA[http://www.webspell-cms.org/index.php?site=news_comments&newsID=2]]></link>
+                     </item>
+  			            <item>
+                       <title>Free Webspell Hosting</title>
+                       <description><![CDATA[I soon proudly present you a website for free hosting of the famous Webspell CMS for clubs, guilds and clans.<br />
+<br />
+You choose a Webspellversion (Clan or Society Edition), have a look for your favourite design and in a moment you have a full working Webspellpage - without having spent any time on setting up your webspace!<br />
+<br />
+Recently im developing, but the most important features are already complete. <br />
+<br />
+Soon there will be an open beta!  ]]></description>
+                       <author>service@webspell-cms.org (Henrik Oelze)</author>
+                       <guid><![CDATA[http://www.webspell-cms.org/index.php?site=news_comments&newsID=1]]></guid>
+                       <link><![CDATA[http://www.webspell-cms.org/index.php?site=news_comments&newsID=1]]></link>
+                     </item>
+  			            </channel>
+             </rss>

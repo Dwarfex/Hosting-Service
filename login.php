@@ -45,9 +45,33 @@
 $_language->read_module('login');
 
 if($loggedin) {
-	$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.strip_tags(getnickname($userID)).'</b></a>';
+	$username='<a href="index.php?site=profile&amp;id='.$userID.'">'.strip_tags(getnickname($userID)).'</a>';
+	
 	if(isanyadmin($userID)) $admin='<a href="admin/admincenter.php" target="_blank">'.$_language->module['admin'].'</a><br />';
 	else $admin='';
+	//hosting addon
+	if(isanyhosting($userID)) $hosting='<a href="hosting_project/admincenter.php" target="_blank">'.$_language->module['hosting'].'</a><br />';
+	else $hosting='<a href="http://www.webspell-cms.org/index.php?site=loginoverview&action=unlockhosting">Unlock Hosting</a><br />';
+	///////////////////////////////////////////////////////////////////////////////////////
+	// support addon start
+	if(ishostingadmin($userID)) {
+	$abfrage = ''; }
+	else { $abfrage = 'AND poster = '.$userID;
+	}
+	$result=safe_query("SELECT * FROM ".PREFIX."support_main WHERE saved = '1' ".$abfrage." AND status= 'open'");	
+	if(mysql_num_rows($result)) {
+	$i=0;
+		while($ds=mysql_fetch_array($result)) {		
+			$i++;
+			}
+			$_language->read_module('support');		
+			$support = $_language->module['login_support'];
+			$support .= $i;
+			$support .= $_language->module['login_support2'];
+			$_language->read_module('login');	
+			} else { $support =''; }
+	//support addon end
+	//hosting addon end
 	
 	$anz=getnewmessages($userID);
 	if($anz) {
@@ -59,6 +83,9 @@ if($loggedin) {
 
 	eval ("\$logged = \"".gettemplate("logged")."\";");
 	echo $logged;
+	
+	
+	
 }
 else {
 	//set sessiontest variable (checks if session works correctly)

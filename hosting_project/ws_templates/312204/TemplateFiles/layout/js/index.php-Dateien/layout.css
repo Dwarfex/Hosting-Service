@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#holder {
+	width:866px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	overflow:hidden;
+	padding-left:1px;
+	padding-right:1px;
+	background-image: url(../bg/line_bg.png);
+	background-repeat:no-repeat;
+	min-height:1300px;
+	
+	
+}
+#header_top {
+	
+	margin: 0px;
+	width:864px;
+	height:29px;
+	background-image:url(../header/top.png);
+	background-repeat:no-repeat;
+	
+	
+}
+
+#header_top_inner {
+	width:860px;
+	margin: 0px;
+	padding-left:1px;
+	
+	vertical-align:middle;
+	
+	height:29px;
+	overflow:hidden;
+	
+	
+	
+}
+#header {
+	width:866px;
+	margin-top: 0px;
+	height:185px;
+	background-image:url(../header/header.png);
+	background-repeat:no-repeat;
+
+}
+#nav_top {
+	width:866px;
+	margin-top: 0px;
+	height:30px;
+	background-image:url(../header/navi_top.png);
+	background-repeat:no-repeat;
+
+}
+#nav_bottom {
+	width:866px;
+	margin-top: 0px;
+	height:29px;
+
+	background-image:url(../header/navi_bottom.png);
+	background-repeat:no-repeat;
+
+}
+
+#linel {
+	
+	background-image:url(../bg/line.png);
+	background-repeat:no-repeat;
+	float: left;
+	height:1300px;
+	width:1px;
+}
+#liner {
+	
+	background-image:url(../bg/line.png);
+	background-repeat:no-repeat;
+	float: right;
+	height: 1300px;
+	width: 1px;
+	margin-top:0px;
+}
+
+
+#content {
+	width:866px;
+	margin-top: 0px;
+	
+
+}
+#content_real {
+float:left;
+width: 594px;
+margin-left: 5px;
+margin-right: 10px;
+text-align:center;
+}
+#footer {
+	width:866px;
+	margin-top: 0px;
+	clear:both;
+	
+
+}
+/*Menue Style Start*/
+.chromemenu{
+	margin-left: 200px;
+width: 99%;
+font-weight: bold;
+font-size:14px;
+font-family:Arial, Helvetica, sans-serif;
+
+font-size-adjust:inherit;
+}
+
+.chromemenu:after{ /*Add margin between menu and rest of content in Firefox*/
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+
+
+.chromemenu ul{
+
+width: 100%;
+
+padding: 8px 10px;
+margin: 0;
+text-align: left; /*set value to "right" for example to align menu to the left of page*/
+}
+
+.chromemenu ul li{
+display: inline;
+}
+
+.chromemenu ul li a{
+color: #638e15;
+padding: 8px 10px;
+margin: 0;
+text-decoration: none;
+
+}
+
+.chromemenu ul li a:hover, .chromemenu ul li a.current{
+	text-decoration:underline;
+}
+.tabcontainer{
+clear: left;
+overflow: hidden;
+
+
+}
+
+/* navi bottom style */
+.tabcontent { 
+  width: auto;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding-top:4px;
+  display:none;
+}
+
+
+
+.tabcontent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  
+}
+
+.tabcontent ul li {
+	
+  margin-left: 15px;
+  display: inline;
+}	
+
+.tabcontent ul li a {
+  
+ 
+  color: #494949;
+   text-decoration:none;
+   font-weight:bold;
+
+  display: inline;
+  
+ 
+}
+
+.tabcontent ul li a:hover {
+  
+  color: #494949;
+  text-decoration:underline;
+}
+
+/* navi bottom style end */
+
+/*Menue Style End*/
+
+/* Box Inlcude (Modules)*/
+.box_head {
+	width:255px;
+	height:40px;
+	background-image:url(../box_bg/top.png);
+	background-repeat:no-repeat;
+	}
+	#box_head h2 {
+  font-family: Arial;
+  font-size: 12px;
+  
+  
+  text-transform: uppercase;
+  font-weight: bold;
+
+	
+}
+.box_middle {
+	width:220px;
+	
+	background-image:url(../box_bg/middle.png);
+	background-repeat: repeat-y;
+	padding-left: 20px;
+	padding-right: 50px;
+	margin-right:50px;
+	text-align: center ;
+}
+
+.box_middle h2 {
+  
+  
+  color: #648f15;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  padding-left: 20px;
+  font-family:Arial;
+  font-weight:bold;
+  font-variant:normal;
+  
+  
+  
+  padding-top:11px;
+}
+
+
+.box_middle  a {
+  
+  
+  color: #648f15;
+  text-decoration: none;
+  
+}
+
+.box_middle  a:hover {
+	text-decoration:underline;
+  color: #648f15;
+}
+
+.box_bottom {
+	width:255px;
+	height:23px;
+	background-image:url(../box_bg/bottom.png);
+	background-repeat:no-repeat;
+}
+.news{
+width:585px;
+}
+
+.news h2 {
+	color: #648f15;
+}
+
+.news a {
+	font-weight:400;
+}
+
+.news a:hover {
+	text-decoration:underline;
+}
+
+.news_content table {
+	float:right;
+	margin: 4px 4px 4px 4px;
+}
+
+.news_content {
+	text-align:justify;
+}
+.news_content_image {
+float:right;
+	margin: 0 4px 4px 0
+}
+
+.white {
+	
+	
+}

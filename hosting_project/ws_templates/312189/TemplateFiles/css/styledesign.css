@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+body {
+	background-image: url('../images/bg_main.png');
+	background-color:#0084d7;
+	background-repeat: repeat-x;
+	margin: 0px;
+}
+#main_container {
+	width: 1000px;
+	margin: 0px auto;
+	}
+#header {
+	background-image: url('../images/logo.PNG');
+	background-repeat: no-repeat;
+	width: 1000px;
+	height: 145px;
+	margin: 0px;
+}
+#head_advert {
+	position: absolute;
+	margin: 53px 0 0 447px;
+	width: 468px;
+	height: 60px;
+}
+#content {
+	background-color: #FFF;
+	padding-left:1px;
+	padding-right:1px;
+}
+#advert {
+	background-color: #FFF;
+	background-image:url(../images/adv_17.png);
+	width:998px;
+	height:110px;
+	padding-top:27px;
+	padding-left:0px;
+	padding-right:0px;
+}
+#navi_leiste {
+	background-image: url('../images/nav_main.png');
+	width: 1000px;
+	height: 45px;
+}
+#navi {
+	padding: 0px 0 0 0px;
+}
+#navi ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+#navi ul li {
+    list-style: none;
+	float: left;
+    display: inline;
+}
+
+#navi ul li a{
+	display: block;
+	padding: 0 0px;
+}
+#navi .home a:link, .home a:visited {
+	background-image: url('../images/nav_home.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .home a:hover {
+	background-image: url('../images/nav_home_hov.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .team a:link, .team a:visited {
+	background-image: url('../images/nav_team.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .team a:hover {
+	background-image: url('../images/nav_team_hov.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .videos a:link, .videos a:visited {
+	background-image: url('../images/nav_videos.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .videos a:hover {
+	background-image: url('../images/nav_videos_hov.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .com a:link, .com a:visited {
+	background-image: url('../images/nav_com.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .com a:hover {
+	background-image: url('../images/nav_com_hov.png');
+	width: 97px;
+	height: 45px;
+}
+#navi .filebase a:link, .filebase a:visited {
+	background-image: url('../images/nav_filebase.png');
+	width: 98px;
+	height: 45px;
+}
+#navi .filebase a:hover {
+	background-image: url('../images/nav_filebase_hov.png');
+	width: 98px;
+	height: 45px;
+}
+#footer {
+	background-image: url('../images/footer.png');
+	width: 1000px;
+	height: 176px;
+}

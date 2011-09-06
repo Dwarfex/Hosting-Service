@@ -1,0 +1,95 @@
+﻿<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.post.title.value == "") {
+		alert("You have to enter a title!");
+		document.post.title.focus();
+   		return false;
+	}
+	
+	if(document.post.message.value == "") {
+		alert("You have to enter text!");
+		document.post.message.focus();
+   		return false;
+	}
+	
+}
+function fillcomments(){
+	document.getElementById('comments').value=getselection('access');
+}
+-->
+</script>
+<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+		 <link href="_stylesheet.css" rel="stylesheet" type="text/css">
+<form action="tutorials.php?action=save" method="post" name="post" onSubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_tutorial%</td>
+  </tr>  
+  <tr>
+    <td bgcolor="$pagebg"></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>$addbbcode</td>
+    <td>$addflags</td>
+  </tr>
+</table>
+</td>
+  </tr>  
+  <tr>
+    <td bgcolor="$bg1"><table width="100%" border="0" cellspacing="0" cellpadding="1">
+      <tr> 
+        <td colspan="2"><hr noshade size="1" color="$border"></td>
+      </tr>
+      <tr>
+        <td><font size="-2">%difficulty%</font></td>
+        <td>
+        <select name="schwier">
+        <option selected="selected" value="1">1 - very easy</option>
+        <option value="2">2 - easy</option>
+        <option value="3">3 - normal</option>
+        <option value="4">4 - hard</option>
+        <option value="5">5 - very hard </option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td><font size="-2">%title%:</font></td>
+        <td><input name="title" type="text" size="75" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'" />
+        </td>
+      </tr>
+      <tr>
+        <td><font size="-2">%info%:</font></td>
+        <td><textarea name="vorwort" cols="100" rows="3" class="form_off" id="vorwort" onfocus="this.className='form_on'" onblur="this.className='form_off'"></textarea></td>
+      </tr>
+      <tr>
+        <td><font size="-2">%des%:</font></td>
+        <td><textarea name="message" rows="10" cols="100" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'"></textarea><br /></td>
+      </tr>
+      <tr> 
+        <td colspan="2"><hr noshade size="1" color="$border"></td>
+      </tr>
+      <tr>
+        <td><font size="-2">%preview%: http://</font></td>
+        <td><input name="tpic" type="text" class="form_off" id="tpic" onfocus="this.className='form_on'" onblur="this.className='form_off'" size="50"> <font size="-2">oder/or</font> <input name="upload" type="button" class="button" onclick="MM_openBrWindow('upload.php?tutorialsID=$tutorialsID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%" /></td>
+      </tr>
+      <tr> 
+        <td colspan="2"><hr noshade size="1" color="$border"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="right"><input type="hidden" name="tutorialsID" value="$tutorialsID">
+            <input type="hidden" name="userID" value="$userID">
+            <font size="-2">%allow_comments_for%</font> $accesses
+        	<input type="hidden" name="comments" id="comments" value="" />
+            <input name="save" type="submit" value="%save_tutorial%"> 
+			<input name="button" type="button" class="button" onClick="window.close()" value="%cancel%">
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+

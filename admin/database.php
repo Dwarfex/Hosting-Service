@@ -103,6 +103,99 @@ if($action=="optimize") {
 
 }
 
+elseif($action=="writeonly") {
+  include('../_mysql.php');
+  include('../_settings.php');
+  include('../_functions.php');
+  include('../version.php');
+  
+  	$CAPCLASS = new Captcha;
+	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if(!isset($db)){
+		$get = safe_query("SELECT DATABASE()");
+		$ret = mysql_fetch_array($get);
+		$db = $ret[0];
+	}
+	//Get database information and write SQL-commands
+	$final = "--   #webSPELL ".$version.", visit webspell.org#\n";
+	$final .= "--   webSPELL.org database backup\n";
+	$final .= "--   Code: Florian Siegmund and Thomas Preusse (webspell.org)\n";
+	$final .= "--\n";
+	$final .= "--   webSPELL version: ".$version."\n";
+	$final .= "--   PHP version: ".phpversion()."\n";
+	$final .= "--   MySQL version: ".mysql_get_server_info()."\n";
+	$final .= "--   Date: ".date("r")."\n";
+
+	$result = mysql_query("SHOW TABLE STATUS FROM ".$db);
+	while ($table = mysql_fetch_row($result)) {
+		if(!stristr($table[0],PREFIX)){continue;}
+		$i = 0;
+		$result2 = mysql_query("SHOW COLUMNS FROM $table[0]");
+		$z = mysql_num_rows($result2);
+		$final .= "\n--\n-- webSPELL DB Export - Table structure for table `".$table[0]."`\n--\n\nCREATE TABLE `".$table[0]."` (";
+		$prikey = false;
+		$insert_keys = null;
+		while ($row2 = mysql_fetch_assoc($result2)) {
+			$i++;
+			$insert_keys .="`".$row2['Field']."`";
+			$final .= "`".$row2['Field']."` ".$row2['Type'];
+			if($row2['Null'] != "YES") { $final .= " NOT NULL"; }
+			if($row2['Default']) $final .= " DEFAULT '".$row2['Default']."'";
+			if($row2['Extra']) { $final .= " ".$row2['Extra']; }
+			if($row2['Key'] == "PRI") { $final .= ", PRIMARY KEY  (`".$row2['Field']."`)"; $prikey = true; }
+			if($i < $z){
+				$final .= ", ";
+				$insert_keys .=", ";
+			}
+			else{
+			 	$final .= " ";
+			}
+		}
+		if($prikey) {
+			if($table[10]) $auto_inc = " AUTO_INCREMENT=".$table[10];
+			else $auto_inc = " AUTO_INCREMENT=1";
+		}
+		else $auto_inc = "";
+		$charset = explode("_", $table[14]);
+		$final .= ") ENGINE=".$table[1]." DEFAULT CHARSET=".$charset[0]." COLLATE=".$table[14].$auto_inc.";\n\n--\n-- webSPELL DB Export - Dumping data for table `".$table[0]."`\n--\n";
+
+		$inhaltq = mysql_query("SELECT * FROM $table[0]");
+		while($inhalt = mysql_fetch_array($inhaltq,MYSQL_BOTH)) {
+			$final .= "\nINSERT INTO `$table[0]` (";
+			$final .= $insert_keys;
+			$final .= ") VALUES (";
+			for($i=0;$i<$z;$i++) {
+
+				$inhalt[$i] = str_replace("'","`", $inhalt[$i]);
+				$inhalt[$i] = str_replace("\\","\\\\", $inhalt[$i]);
+				$einschub = "'".$inhalt[$i]."'";
+				$final .= preg_replace('/\r\n|\r|\n/', '\r\n', $einschub);
+				if(($i+1)<$z) $final .= ", ";
+
+			}
+			$final .= ");";
+		}
+		$final .= "\n";
+	}
+
+	systeminc('session');
+	systeminc('login');
+
+	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (page='1' OR super='1') AND userID='$userID'"));
+
+	if($anz) {
+		header("Expires: 0");
+		header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+		header("Content-Type: application/force-download");
+		header("Content-Description: File Transfer");
+		if(is_integer(mb_strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "msie")) AND is_integer(mb_strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "win" ))) header("Content-Disposition: filename=backup-".strtolower(date("D-d-M-Y")).".sql;");
+		else header("Content-Disposition: attachment; filename=backup-".strtolower(date("D-d-M-Y")).".sql;");
+		header("Content-Transfer-Encoding: binary");
+		echo $final;
+	}
+	} else echo $_language->read_module('database').$_language->module['transaction_invalid'];
+}
+
 elseif($action=="write") {
   include('../_mysql.php');
   include('../_settings.php');
@@ -128,6 +221,7 @@ elseif($action=="write") {
 
 	$result = mysql_query("SHOW TABLE STATUS FROM ".$db);
 	while ($table = mysql_fetch_row($result)) {
+		
 		$i = 0;
 		$result2 = mysql_query("SHOW COLUMNS FROM $table[0]");
 		$z = mysql_num_rows($result2);
@@ -212,7 +306,10 @@ else {
       <td class="title"><b>'.$_language->module['select_option'].'</b></td>
     </tr>
     <tr>
-      <td class="td1" colspan="2">&#8226; <a href="database.php?action=write&amp;captcha_hash='.$hash.'">'.$_language->module['export'].'</a></td>
+      <td class="td1" colspan="2">&#8226; <a href="database.php?action=write&amp;captcha_hash='.$hash.'">'.$_language->module['export'].'&nbsp;Complete </a></td>
+    </tr>
+	<tr>
+      <td class="td1" colspan="2">&#8226; <a href="database.php?action=writeonly&amp;captcha_hash='.$hash.'">'.$_language->module['export'].'&nbsp;Only WS|CMS.org</a></td>
     </tr>
     <tr>
       <td class="td2" colspan="2">&#8226; <a href="admincenter.php?site=database&amp;action=optimize">'.$_language->module['optimize'].'</a></td>

@@ -1,0 +1,63 @@
+<style type="text/css">
+.email_box {
+	background-color:#F6F6F6;
+	border:1px dashed #CCCCCC;
+	padding:2px;
+}
+.shop_td1 {
+	background-color:#F6F6F6;
+	border-top:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+}
+.shop_td2 {
+	background-color:#EFEFEF;
+}
+.misc_td {
+	background-color:#FFFFFF;
+	padding:3px;
+}
+#mails {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+h5 {
+	font-size:22px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+}
+</style>
+<table align="center" width="80%" border="0" cellspacing="0" cellpadding="0" id="mails">
+							<tr>
+							 <td align="center" colspan="4"><h5><strong>$firma</strong></h5><br /><br /></td>
+							</tr>
+							<tr>
+							 <td colspan="4" class="shop_td1" style="font-size: 8pt;"><br />
+                                $firma2<br />
+                                $firstname $lastname<br />
+                                $strasse $hn<br />
+                                $plz $stadt<br /><br />
+                                $email<br />
+                                $telefon<br /><br />
+							 </td>
+							</tr>
+							<tr>
+							 <td colspan="4" class="shop_td2"><strong>Order number:</strong> $auftrag<br /><br />
+							  Thank you for your order!<br /></td>
+							</tr>
+							<td class="misc_td">$produkte</td>
+							<tr>
+							 <td colspan="4" class="shop_td1"><strong>Bank name:</strong> $bank<br /><strong>Bank account:</strong> $konto<br /><strong>BLZ:</strong> $blz<br /><strong>IBAN:</strong> $iban<br /><strong>IBIC:</strong> $bic</td>
+							</tr>
+							<tr>
+							 <td colspan="4" class="shop_td2">We will process your order after we get a proof mof payment!<br />For delivery outside our country please contact administrator!</td>
+							</tr>
+							<tr>
+							 <td colspan="4" class="shop_td1">Your sincerely,<br />$admin_name</td>
+							</tr>
+						   </table>
+<table border="0" cellspacing="0" cellpadding="0">
+							   <tr>
+								<td class="email_box">$firma<br />$inhaber<br />$anschrift<br />$fplz $fstadt<br />$telfax<br />$url</td>
+							   </tr>
+							  </table>

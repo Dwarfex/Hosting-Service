@@ -1,0 +1,41 @@
+#disclaimer {
+	 color: #FFFFFF;
+	 background-color: #ac453d;
+	 padding: 5px;
+	 font-size: 12px;
+	 font-family: Arial, Helvetica, sans-serif;
+	 }
+	 
+#videos {
+	border-bottom: 1px $border;
+	margin-bottom: 5px;
+	}
+	
+#videos img {
+	border: 1px solid #EEEEEE;
+	padding: 3px;
+	max-width: 100px;
+	margin: 5px;
+	}
+	 
+#copyright {
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	}
+	
+#error {
+	padding: 5px; 
+	background-color: #ac453d; 
+	color: #FFFFFF; 
+	font-family: Arial; 
+	font-size: 12px;
+	}
+	
+#successful { 
+	padding: 5px; 
+	background-color: #2b731c; 
+	color: #FFFFFF; 
+	font-family: Arial; 
+	font-size: 12px;
+	}

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2009 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -42,9 +42,16 @@
 ##########################################################################
 */
 
+ini_set('session.use_trans_sid', 0);  
+ini_set('session.use_cookies', 1); 
+ini_set('session.use_only_cookie', 1); 
+ 
+
+
+
 // -- ERROR REPORTING -- //
 
-define('DEBUG', "OFF");
+define('DEBUG', "ON");
 error_reporting(0); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
@@ -124,7 +131,6 @@ function security_slashes(&$array) {
 security_slashes($_POST);
 security_slashes($_COOKIE);
 security_slashes($_GET);
-security_slashes($_REQUEST);
 
 // -- MYSQL QUERY FUNCTION -- //
 
@@ -244,6 +250,7 @@ function isignored($userID, $buddy) {
 // -- GLOBAL SETTINGS -- //
 
 $ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."settings"));
+
 
 $maxshownnews				=	$ds['news']; 				if(empty($maxshownnews)) $maxshownnews = 10;
 $maxnewsarchiv				=	$ds['newsarchiv']; 			if(empty($maxnewsarchiv)) $maxnewsarchiv = 20;

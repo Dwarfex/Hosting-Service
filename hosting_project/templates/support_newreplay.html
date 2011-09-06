@@ -1,0 +1,15 @@
+<form action="admincenter.php?site=support&amp;action=savereplay" method="post" name="post" onsubmit="return chkFormular()">
+$addbbcode<hr />
+
+<textarea name="text" cols="50" rows="10"  class="sup_content"  id="message"></textarea><br /><br />
+<b>%options%:</b>   %html%  %bbcode%  %smilies%<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td>	
+	<input type="hidden" name="poster" value="$userID" />
+	<input type="hidden" name="supmainID" value="$supmainID" />
+	<input type="submit" name="submit" value="%save%" />
+	</td>
+  </tr>
+</table>
+</form>

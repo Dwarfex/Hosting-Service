@@ -1,0 +1,242 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.post.title.value == "") {
+		alert("You have to enter a title!");
+		document.post.title.focus();
+   		return false;
+	}
+	
+	if(document.post.message.value == "") {
+		alert("You have to enter text!");
+		document.post.message.focus();
+   		return false;
+	}
+	
+}
+-->
+</script>
+
+
+<form action="works.php?action=save" enctype="multipart/form-data" method="post" name="post" onSubmit="return chkFormular()">
+  <table width="100%" cellspacing="1" cellpadding="2" bgcolor="$border">
+    <tr> 
+      <td class="title" align="center" bgcolor="$bghead" width="100%"><b>%edit_project%</b> </td>
+    </tr>
+    <tr> 
+      <td bgcolor="$pagebg" width="100%"></td>
+    </tr>
+    <tr> 
+      <td bgcolor="$bg1" width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="2" class="formtable">
+          <tr> 
+            <td valign="top" colspan="2">
+              <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="50%">
+                    <p align="left">$addbbcode</p>                  </td>
+                  <td width="50%">
+                    <p align="right">$addflags</p>                  </td>
+                </tr>
+              </table>            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="2"><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%"><div align="center">
+                <p align="left"><b>%name%:
+            </b></div></td>
+            <td width="90%">
+              <p align="left"><b>
+                  <input name="title" type="text" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$title" size="72" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><b>%url%:</b></td>
+            <td width="90%">
+              <p align="left"><input name="pagelink" type="text" class="form_off" id="pagelink" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$pagelink" size="72" /></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><strong>%status%:</strong></p>            </td>
+            <td width="90%">
+              <p align="left">              <input name="status" type="checkbox" value="1" $status>online</td>
+          </tr>
+          <tr align="center">
+            <td width="10%"><div align="center">
+                <p align="left"><b>%designer%:&nbsp;
+            </b></div></td>
+            <td width="90%">
+              <p align="left"><b>
+                  <input name="designer" type="text" class="form_off" id="designer" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$designer" size="72" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%"><div align="center">
+                <p align="left"><b>%slicer%:&nbsp;
+            </b></div></td>
+            <td width="90%">
+              <p align="left"><b>
+              <input name="slicer" type="text" class="form_off" id="slicer" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$slicer" size="72" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%"><div align="center">
+                <p align="left"><b>%coder%:&nbsp;
+            </b></div></td>
+            <td width="90%">
+              <p align="left"><b>
+              <input name="code" type="text" class="form_off" id="code" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$code" size="72" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%"><div align="center">
+                <p align="left"><b>%programs%:&nbsp;
+            </b></div></td>
+            <td width="90%">
+              <p align="left"><b>
+                  <input name="programme" type="text" class="form_off" id="programme" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$programme" size="72" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%"><div align="center">
+                <p align="left"><b>%release%:&nbsp;
+            </b></div></td>
+            <td width="90%">
+              <p align="left"><b>
+                  <input name="release" type="text" class="form_off" id="release" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$release" size="72" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td colspan="2"><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr align="center">
+            <td colspan="2"><strong>%designed_for%</strong></td>
+          </tr>
+          <tr align="center">
+            <td colspan="2">
+              <hr noshade size="1" color="$border">            </td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><b>%name%:&nbsp;</b></p>            </td>
+            <td width="90%">
+              <p align="left"> <b>
+              <input name="auftraggeber1" type="text" class="form_off" id="auftraggeber1" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$auftraggeber1" size="60" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><b>%surname%:&nbsp;</b></p>            </td>
+            <td width="90%">
+              <p align="left"> <b>
+              <input name="auftraggeber2" type="text" class="form_off" id="auftraggeber2" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$auftraggeber2" size="60" />
+            </b></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><strong><b>%nickname%:</b></strong></td>
+            <td width="90%">
+              <p align="left"> <strong><b>
+              <input name="auftragmsn" type="text" class="form_off" id="auftragicq" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$auftragmsn" size="60" />
+            </b></strong></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><b>%email%</b>:&nbsp;</p>            </td>
+            <td width="90%">
+              <p align="left"> <strong><b>
+              <input name="auftragmail" type="text" class="form_off" id="auftraggeber13" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$auftragmail" size="60" />
+            </b></strong></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><b>%icq%:&nbsp;</b></p>            </td>
+            <td width="90%">
+              <p align="left"> <strong><b>
+              <input name="auftragicq" type="text" class="form_off" id="auftraggeber14" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$auftragicq" size="60" />
+            </b></strong></td>
+          </tr>
+          <tr align="center">
+            <td width="10%">
+              <p align="left"><b>%homepage%:&nbsp;</b></td>
+            <td width="90%">
+              <p align="left"> <strong><b>
+              <input name="auftraghp" type="text" class="form_off" id="auftraggeber16" onfocus="this.className='form_on'" onblur="this.className='form_off'" value="$auftraghp" size="60" />
+            </b></strong></td>
+          </tr>
+          <tr align="center">
+            <td colspan="2"><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr align="center">
+            <td colspan="2"><b>%img_upload%</b></td>
+          </tr>
+          <tr align="center">
+            <td align="left" colspan="2">
+              <hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left">
+              <p align="left"><b>%screenshot%:</b></td>
+            <td width="90%" align="left"><input name="screen" type="file" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left"><b>%banner_big%:</b></td>
+            <td width="90%" align="left"><input name="link468" type="file" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left"><b>%banner_small%:</b></td>
+            <td width="90%" align="left"><input name="link88" type="file" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left"><b>%squad_img%:</b></td>
+            <td width="90%" align="left"><input name="squad" type="file" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left"><b>%news_img%:</b></td>
+            <td width="90%" align="left"><input name="news" type="file" class="form_off" onfocus="this.className='form_on'" onblur="this.className='form_off'"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left"></td>
+            <td width="90%" align="left"></td>
+          </tr>
+          <tr align="center">
+            <td width="10%" align="left"></td>
+            <td width="90%" align="left">&nbsp;</td>
+          </tr>
+          <tr align="center">
+            <td colspan="2" align="left"><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr align="center">
+            <td align="left" colspan="2">
+              <p align="center"><b>%comments%</b></td>
+          </tr>
+          <tr align="center"> 
+            <td colspan="2"><hr noshade size="1" color="$border"> </td>
+          </tr>
+          <tr align="center"> 
+            <td colspan="2"><textarea name="message" rows="10" style="width:100%;" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" cols="20">$message</textarea> 
+              <br> </td>
+          </tr>
+          <tr> 
+            <td colspan="2">&nbsp;&nbsp;            </td>
+          </tr>
+          <tr> 
+            <td colspan="2"><hr noshade size="1" color="$border"></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2" class="formtable">
+          <tr> 
+            <td align="right">
+			  <input type="hidden" name="worksID" value="$worksID"> 
+              <input type="hidden" name="userID" value="$userID">
+			  <select name="comments">$comments</select> 
+			  <input name="post" type="submit" value="%edit_project%"> 
+              <input name="button" type="button" class="button" onClick="window.close()" value="%cancel%"></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</form>
+

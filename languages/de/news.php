@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -51,8 +51,8 @@ $language_array = Array(
 	'bbcode'=>'BBCode ist <b><u>AN</u></b>',
 	'cancel'=>'Abbrechen',
 	'comm'=>'Komm',
-	'comment'=>'<a href="$url">[1] Kommentar</a>, letzter von $lastposter - $lastdate',
-	'comments'=>'<a href="$url">[$anzcomments] Kommentare</a>, letzter von $lastposter - $lastdate',
+	'comment'=>'Kommentare:&nbsp;<a href="$url">[1]</a>',
+	'comments'=>'Kommentare:&nbsp;<a href="$url">[$anzcomments]</a>',
 	'date'=>'Datum',
 	'delete'=>'löschen',
 	'delete_selected'=>'Markierte löschen',
@@ -74,7 +74,7 @@ $language_array = Array(
 	'news_archive'=>'Archiv',
 	'no'=>'nein',
 	'no_access'=>'Zugriff verwehrt',
-	'no_comment'=>'<a href="$url">keine Kommentare</a>',
+	'no_comment'=>'Kommentare:&nbsp;<a href="$url">[0]</a>',
 	'no_comments'=>'Kommentare deaktivieren',
 	'no_topnews'=>'Keine Top-Neuigkeit',
 	'options'=>'Optionen',
@@ -85,7 +85,7 @@ $language_array = Array(
 	'publish_selected'=>'Markierte veröffentlichen',
 	'really_delete'=>'Diese Neuigkeit wirklich löschen?',
 	'registered'=>'Registrierten Nutzern',
-	'rubric'=>'Rubrik',
+	'rubric'=>'Kategorie',
 	'save_news'=>'Neuigkeit speichern',
 	'select_all'=>'alle markieren',
 	'self'=>'gleiches Fenster',
@@ -101,7 +101,7 @@ $language_array = Array(
 	'user_comments'=>'Benutzer-Kommentare aktivieren',
 	'view_more'=>'Mehr...',
 	'visitor_comments'=>'Besucher-Kommentare aktivieren',
-	'written_by'=>'geschrieben von',
+	'written_by'=>'verfasst von',
 	'yes'=>'ja'
 );
 ?>

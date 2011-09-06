@@ -43,7 +43,7 @@
 */
 
 function isanyadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."' AND (page='1' OR forum='1' OR user='1' OR news='1' OR clanwars='1' OR feedback='1' OR super='1' OR gallery='1' OR cash='1' OR files='1') "));
+	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."' AND (page='1' OR forum='1' OR user='1' OR news='1' OR clanwars='1' OR feedback='1' OR super='1' OR gallery='1' OR cash='1' OR hosting='1' OR files='1') "));
 	return $anz;
 }
 
@@ -174,6 +174,21 @@ function isinusergrp($usergrp, $userID, $sp=1) {
 	if(!usergrpexists($usergrp)) return 0;
 	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_forum_groups WHERE (`".$usergrp."`=1) AND userID='".$userID."'"));
 	if($sp) if(!$anz) $anz=isforumadmin($userID);
+	return $anz;
+}
+
+function ishostingadmin($userID) {
+	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (super='1' OR hosting='1') AND userID='".$userID."'"));
+	return $anz;
+}
+
+function ishostingusr($userID) {
+	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (super='1' OR hostingusr='1') AND userID='".$userID."'"));
+	return $anz;
+}
+
+function isanyhosting($userID) {
+	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (hosting='1' OR hostingusr='1' OR super='1') AND userID='".$userID."'  "));
 	return $anz;
 }
 

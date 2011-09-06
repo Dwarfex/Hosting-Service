@@ -1,0 +1,49 @@
+body { font: normal 11px Verdana; color:#000; background-color:#0d171f; background-image:url(styles/bg.jpg); background-repeat:repeat-x; margin:0px; padding:0px; }
+
+/*---| PAGE |---*/
+#container { background-image:url(styles/vorderbg.jpg); width:1000px; height:741px; background-repeat:no-repeat; margin:auto; }
+#page { background-color:#f2eee7; width:900px; height:auto; margin:auto; }
+#header { background-image:url(styles/header.jpg); width:567px; height:70px; padding-top:80px; padding-left:333px; }
+#overinhalt { background-image:url(styles/overcontent.jpg); width:900px; height:9px; overflow:hidden; }
+#inhalt { width:900px; height:auto; }
+#top { width:900px; height:116px; float:left; }
+#top p { padding:3px; margin:0px; }
+#topleft { width:502px; height:76px; padding:30px 50px 10px; float:left; }
+#topright { width:298px; height:84px; float:left; }
+#languages { width:271px; height:32px; padding-right:27px; text-align:right; }
+#left { width:637px; height:auto; padding-left:4px; padding-right:4px; float:left; }
+#right { width:255px; height:auto; padding-top:10px; float:left; }
+
+.menu { width:235px; height:auto; padding-left:20px; overflow:hidden; }
+.menu ul { width:auto; padding:0px; margin:5px; list-style-type:none; }
+.menu li { width:auto; padding-left:8px; font-size:9px; list-style-type:none; }
+.menu h2 { font-size:10px; color:#336c71; font-weight:bold; padding:0px; margin-top:15px; margin-bottom:2px; text-transform:none; }
+
+
+/*---| NEWS |---*/
+.newsgesamt { width:637px; height:auto; }
+.newstop { width:637px; height:73px; }
+.newsheadline { width:637px; height:31px; padding-top:6px; }
+.newsheadline h1 { font-size:16px; background:none !important; text-transform:none; }
+.newsposts { width:631px; padding-left:6px; padding-top:6px; height:30px; font-style:italic; }
+.newspic { width:204px; height:auto; float:left; }
+.newstext { width:418px; height:auto; padding-left:10px; padding-right:5px; text-align:justify; font-size:12px; font-family:Arial, Helvetica, sans-serif; float:left; }
+.newstext p { padding:4px; margin:0px; }
+
+/*---| LOGIN |---*/
+.logingesamt { width:auto; height:28px; }
+.logininput { background-image:url(styles/login/loginbg.jpg); width:130px; height:20px; float:left; padding:4px 7px; margin-right:7px; overflow:hidden; }
+.submit { width:42px; height:27px; margin-right:7px; float:left; }
+.loginp { width:auto; padding-top:4px; padding-right:7px; float:left; }
+
+/*---| LOGGED |---*/
+.logged { width:auto; height:auto; }
+.logged a, .logged a:visited, .logged a:active { color:#fff; text-decoration:none; }
+.logged a:hover { color:#84a6ad; text-decoration:none; }
+
+/*---| FOOTER |---*/
+.footext { text-align:center; color:#000; padding-top:8px; padding-bottom:8px; }
+.footext a, .footext a:visited, .footext a:active { color:#000; text-decoration:none; }
+.footext a:hover { color:#336c71; text-decoration:none; }
+
+.clear { clear:both; }

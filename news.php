@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2009 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -140,18 +140,23 @@ elseif($action=="save") {
 
 	$link1 = strip_tags($_POST['link1']);
 	$url1 = strip_tags($_POST['url1']);
+	
+
 	$window1 = $_POST['window1'];
 
 	$link2 = strip_tags($_POST['link2']);
 	$url2 = strip_tags($_POST['url2']);
+	
 	$window2 = $_POST['window2'];
 
 	$link3 = strip_tags($_POST['link3']);
 	$url3 = strip_tags($_POST['url3']);
+	
 	$window3 = $_POST['window3'];
 
 	$link4 = strip_tags($_POST['link4']);
 	$url4 = strip_tags($_POST['url4']);
+	
 	$window4 = $_POST['window4'];
 
 	$intern = $_POST['intern'];
@@ -248,8 +253,8 @@ elseif($action=="preview") {
 
 	$bg1=BG_1;
 
-	eval ("\$title_news = \"".gettemplate("title_news")."\";");
-	echo $title_news;
+	//eval ("\$title_news = \"".gettemplate("title_news")."\";");
+	//echo $title_news;
 
 	$bgcolor=BG_1;
 	$date = date("d.m.Y", $ds['date']);
@@ -287,17 +292,17 @@ elseif($action=="preview") {
 	$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 	$related='';
 	$comments="";
-	if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
-	if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a> ';
+	if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&bull; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a><br /> ';
+	if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&bull; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a><br /> ';
 
-	if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a> ';
-	if($ds['link2'] && $ds['url2']!="http://" && !$ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'">'.$ds['link2'].'</a> ';
+	if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&bull; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a><br /> ';
+	if($ds['link2'] && $ds['url2']!="http://" && !$ds['window2']) $related.='&bull; <a href="'.$ds['url2'].'">'.$ds['link2'].'</a><br /> ';
 
-	if($ds['link3'] && $ds['url3']!="http://" && $ds['window3']) $related.='&#8226; <a href="'.$ds['url3'].'" target="_blank">'.$ds['link3'].'</a> ';
-	if($ds['link3'] && $ds['url3']!="http://" && !$ds['window3']) $related.='&#8226; <a href="'.$ds['url3'].'">'.$ds['link3'].'</a> ';
+	if($ds['link3'] && $ds['url3']!="http://" && $ds['window3']) $related.='&bull; <a href="'.$ds['url3'].'" target="_blank">'.$ds['link3'].'</a><br /> ';
+	if($ds['link3'] && $ds['url3']!="http://" && !$ds['window3']) $related.='&bull; <a href="'.$ds['url3'].'">'.$ds['link3'].'</a><br /> ';
 
-	if($ds['link4'] && $ds['url4']!="http://" && $ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'" target="_blank">'.$ds['link4'].'</a> ';
-	if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a> ';
+	if($ds['link4'] && $ds['url4']!="http://" && $ds['window4']) $related.='&bull; <a href="'.$ds['url4'].'" target="_blank">'.$ds['link4'].'</a><br /> ';
+	if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&bull; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a><br /> ';
     $adminspacer = '';
 	eval ("\$news = \"".gettemplate("news")."\";");
 	echo $news;
@@ -344,8 +349,10 @@ elseif($quickactiontype=="unpublish") {
 		}	
 		else safe_query("UPDATE ".PREFIX."news SET published='0' WHERE newsID='".(int)$newsID."'");	
 		generate_rss2();
+		
 	}
 	header("Location: index.php?site=news");
+	
 }
 elseif($quickactiontype=="delete") {
 	include("_mysql.php");
@@ -539,8 +546,8 @@ elseif(basename($_SERVER['PHP_SELF'])=="news.php"){
 elseif($action=="unpublished") {
 	$_language->read_module('news');
 	
-  eval ("\$title_news = \"".gettemplate("title_news")."\";");
-	echo $title_news;
+  //eval ("\$title_news = \"".gettemplate("title_news")."\";");
+	//echo $title_news;
 
 	$post='';
 	
@@ -584,7 +591,7 @@ elseif($action=="unpublished") {
 				$headlines='';
 				
 				foreach($message_array as $val) {
-					$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a><br />';
+					$headlines.=htmloutput('<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">[flag]'.$val['lang'].'[/flag] '.$val['headline'].'</a><br />');
 				}
 
 				$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'">'.getnickname($ds['poster']).'</a>';
@@ -706,8 +713,9 @@ elseif($action=="archive") {
 			$headlines='';
 
 			foreach($message_array as $val) {
-				$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a> '.$isintern.'<br />';
+				$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">[flag]'.$val['lang'].'[/flag] '.$val['headline'].'</a> '.$isintern.'<br />';
 			}
+			$headlines = htmloutput($headlines);
 
 			$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'">'.getnickname($ds['poster']).'</a>';
 
@@ -743,8 +751,8 @@ elseif($action=="archive") {
 else {
 	$_language->read_module('news');
   
-	eval ("\$title_news = \"".gettemplate("title_news")."\";");
-	echo $title_news;
+	//eval ("\$title_news = \"".gettemplate("title_news")."\";");
+	//echo $title_news;
 
 	$post='';
 	$publish='';
@@ -765,10 +773,13 @@ else {
 		$showonly = "AND rubric='".$dv['rubricID']."'";
 	}
 	else $showonly = '';
-
-	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID)." ".$showonly." ORDER BY date DESC LIMIT 0,".$maxshownnews);
+	
+	$nummern=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID));
+	$ohneende=mysql_num_rows($nummern);
+	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID)." ".$showonly." ORDER BY date DESC LIMIT 0,".$ohneende);
 
 	$i=1;
+	$nsx=1;
 	while($ds=mysql_fetch_array($result)) {
 		/*if($i%2) $bg1=BG_1;
 		else $bg1=BG_2;*/
@@ -809,17 +820,17 @@ else {
 		$headline = clearfromtags($headline);
 		$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 		$related="";
-    if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
-		if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a> ';
+    if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&bull; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a><br /> ';
+		if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&bull; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a><br /> ';
 
-		if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a> ';
-		if($ds['link2'] && $ds['url2']!="http://" && !$ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'">'.$ds['link2'].'</a> ';
+		if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&bull; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a><br /> ';
+		if($ds['link2'] && $ds['url2']!="http://" && !$ds['window2']) $related.='&bull; <a href="'.$ds['url2'].'">'.$ds['link2'].'</a><br /> ';
 
-		if($ds['link3'] && $ds['url3']!="http://" && $ds['window3']) $related.='&#8226; <a href="'.$ds['url3'].'" target="_blank">'.$ds['link3'].'</a> ';
-		if($ds['link3'] && $ds['url3']!="http://" && !$ds['window3']) $related.='&#8226; <a href="'.$ds['url3'].'">'.$ds['link3'].'</a> ';
+		if($ds['link3'] && $ds['url3']!="http://" && $ds['window3']) $related.='&bull; <a href="'.$ds['url3'].'" target="_blank">'.$ds['link3'].'</a><br /> ';
+		if($ds['link3'] && $ds['url3']!="http://" && !$ds['window3']) $related.='&bull; <a href="'.$ds['url3'].'">'.$ds['link3'].'</a><br /> ';
 
-		if($ds['link4'] && $ds['url4']!="http://" && $ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'" target="_blank">'.$ds['link4'].'</a> ';
-		if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a> ';
+		if($ds['link4'] && $ds['url4']!="http://" && $ds['window4']) $related.='&bull; <a href="'.$ds['url4'].'" target="_blank">'.$ds['link4'].'</a><br /> ';
+		if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&bull; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a><br /> ';
 
 		if(empty($related)) $related="n/a";
 
@@ -848,14 +859,49 @@ else {
 		}
 
 		eval ("\$news = \"".gettemplate("news")."\";");
-		echo $news;
+		 $newsall[] = $news;
 
 		$i++;
-
+		$nsx++;
+		
 		unset($related);
 		unset($comments);
 		unset($lang);
 		unset($ds);
 	}
+	$nsx--;
+	$sitezahl = $nsx / $maxshownnews;
+	$sitezahl = ceil($sitezahl);
+	if (!isset($_GET["nos"])) { 
+	$siteget = 1;
+	}
+	else {
+    $siteget = $_GET["nos"]; }
+	$siteget2 = $siteget;
+    $siteget--;
+    $start = $siteget * $maxshownnews;
+    $ending = $start + $maxshownnews;
+
+	while ($ending > $nsx)
+{
+$ending--;
 }
+$ending--;
+for ($zähler123 = $start; $zähler123 <= $ending; $zähler123++)
+{
+echo $newsall[$zähler123];
+}
+$siteop = "";
+for ($nm = 1; $nm <= $sitezahl; $nm++)
+    {
+	if ($siteget2 == $nm) {
+	$siteop .= '<a style="color:#fff; font-weight:bold;" href="'.'index.php'.'?site=news&amp;nos='.$nm.'">'.$nm.'</a> ';
+	}
+	else {
+     $siteop .= '<a style="color:#fff; font-weight:bold; text-decoration:underline;" href="'.'index.php'.'?site=news&amp;nos='.$nm.'" >'.$nm.'</a>';
+	  }  
+    }
+	echo '<table width="545px" border="0" cellspacing="0" cellpadding="0"><tr><td align="right" style="color:#fff">'.$_language->module['page'].''.$siteop.'</td></tr></table>';
+}
+
 ?>

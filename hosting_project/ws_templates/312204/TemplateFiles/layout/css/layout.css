@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+#holder {
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	background-image:url(../design/white_bg.png);
+	background-repeat:repeat-y;
+	
+	
+	
+	
+}
+
+#header {
+	width:990px;
+	height:159px;
+	background-image:url(../design/header.png);
+	background-repeat:no-repeat;
+	padding-top:10px;	
+	padding-left:10px;
+	
+}
+
+
+#content{
+	width:1000px;	
+	clear:both;
+	min-height:700px;
+	
+}
+
+#content_left, #content_right {
+	width:241px;
+	float:left;
+}
+
+#content_middle {
+	width:518px;
+	float:left;
+}
+
+
+#footer {
+	width:990px;
+	height:32px;
+	clear:both;
+	background-image:url(../design/footer.png);
+	background-repeat:no-repeat;
+	padding-top:10px;	
+	padding-left:10px;
+	text-align:center;
+	
+}
+
+
+
+.arrowlistmenu {
+width: 241px; /*width of accordion menu*/
+}
+
+.arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+font: bold 13px Verdana;
+color: #84a903;
+background-repeat:no-repeat;
+background: url(../design/navi_head.png);
+height:25px;
+margin-bottom: 0px; 
+margin-top: 0px; 
+text-transform: uppercase;
+padding-left:35px;
+padding-top:10px;
+
+cursor: pointer;
+}
+
+.arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+background-repeat:no-repeat;
+background: url(../design/navi_head_active.png);
+
+}
+
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+list-style-type: none;
+margin: 0;
+padding: 0;
+ /*bottom spacing between each UL and rest of content*/
+}
+
+.arrowlistmenu ul li{
+padding-bottom: 0px; /*bottom spacing between menu items*/
+height:29px;
+
+}
+
+.arrowlistmenu ul li a{
+color: #999999;
+height:29px;
+background-image:url(../design/navi_link.png);
+background-repeat:no-repeat;
+display: block;
+padding: 5px 0;
+padding-left: 35px; /*link text is indented 19px*/
+text-decoration: none;
+font: normal 15px Verdana;
+
+
+}
+
+.arrowlistmenu ul li a:visited{
+
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+color: #FFFFFF;
+background-repeat:no-repeat;
+background-image:url(../design/navi_active.png);
+}
+
+
+
+.module {
+	
+	
+	
+}
+
+.module_body {
+	padding-left:15px;
+}
+
+.module h2 {
+	font: bold 13px Verdana;
+color: #84a903;
+background-repeat:no-repeat;
+background: url(../design/module_head.png);
+height:25px;
+margin-top:0px;
+text-transform: uppercase;
+
+padding-left:45px;
+padding-top:10px;
+}
+

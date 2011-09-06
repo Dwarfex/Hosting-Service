@@ -1,0 +1,57 @@
+<script language="JavaScript" type="text/javascript">
+
+	function chkFormular() {
+	if(document.getElementById('sup_title').value == "") {
+		alert("%enter_title%");
+		document.post.title.focus();
+   		return false;
+	}
+	
+		if(document.getElementById('sup_title').value == "%enter_title%") {
+		alert("%enter_title%");
+		document.post.title.focus();
+   		return false;
+	}
+	
+	if(document.getElementById('message').value == "%enter_content%") {
+		alert("%enter_title%");
+		document.post.title.focus();
+   		return false;
+	}
+	
+	}
+
+</script>
+
+<form action="admincenter.php?site=support&amp;action=saveticket" method="post" name="post" onsubmit="return chkFormular()">
+<input type="text" name="title" size="60" class="sup_title" value="%enter_title%"  onfocus="this.value=''" id='sup_title' />
+<hr />
+<table width="100%" border="0" cellspacing="3" cellpadding="0">
+  <tr>
+    <td width="25%">%importance%:</td>
+    <td width="25%"><select name="stufe">
+		<option value="1" class="niedrig">1 - %low%</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5" class="warning">5 - %important%</option>	
+	</select></td>
+    <td width="25%">%rubric%:</td>
+    <td width="25%">$rubrics</td>
+  </tr>
+</table>
+<hr />
+<center>$addbbcode</center>
+<hr />
+<textarea name="text" cols="50" rows="10" class="sup_content" id="message"></textarea><br />
+<input type="text" name="link" size="60" value="http://"  onfocus="this.value=''" style="width:100%; height:25px;" />
+<br /><br />
+<b>%options%:</b>  %html% %bbcode% %smilies%
+<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><input type="hidden" name="poster" value="$userID" /></td>
+    <td><input type="submit" name="submit" value="%save%" /></td>
+  </tr>
+  </table>
+</form>

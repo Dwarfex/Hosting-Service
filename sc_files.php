@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2009 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -60,6 +60,10 @@ if(mysql_num_rows($ergebnis)){
 		$fileID = $ds['fileID'];
 		$count = $ds['downloads'];
 		$filename = $ds['filename'];
+		$ratingf = $ds['rating'];
+		$filecatID = $ds['filecatID'];
+		$cat = mysql_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$filecatID."'"));
+	    $filecategory = $cat['name'];
 		$number = $n;
     
     if($n%2) {
@@ -67,8 +71,8 @@ if(mysql_num_rows($ergebnis)){
 			$bg2=BG_2;
 		}
 		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
+			$bg1=BG_1;
+			$bg2=BG_2;
 		}
     
 		eval ("\$sc_files = \"".gettemplate("sc_files")."\";");

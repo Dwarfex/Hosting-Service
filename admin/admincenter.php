@@ -112,6 +112,7 @@ if(!isset($_SERVER['REQUEST_URI'])) {
       <li><a href="admincenter.php"><?php echo $_language->module['overview']; ?></a></li>
       <li><a href="admincenter.php?site=page_statistic"><?php echo $_language->module['page_statistics']; ?></a></li>
       <li><a href="admincenter.php?site=visitor_statistic"><?php echo $_language->module['visitor_statistics']; ?></a></li>
+      <li><a href="admincenter.php?site=referer">Referer</a></li>
       <li><a href="../logout.php"><?php echo $_language->module['log_out']; ?></a></li>
     </ul>
     <?php if(isuseradmin($userID)) { ?>

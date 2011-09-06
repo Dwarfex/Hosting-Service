@@ -88,6 +88,8 @@ if(isset($_POST['saveedit'])) {
 		$pageadmin = isset($_POST['pageadmin']);
 		$fileadmin = isset($_POST['fileadmin']);
 		$cashadmin = isset($_POST['cashadmin']);
+		$hostingadmin = isset($_POST['hostingadmin']);
+		$hostingusr = isset($_POST['hostingusr']);
 		$dbauthor = isset($_POST['dbauthor']);
 		if(isset($_POST['position'])) $position = $_POST['position'];
 		else $position=array();
@@ -113,7 +115,9 @@ if(isset($_POST['saveedit'])) {
 													  gallery='$gallery',
 													  files='$fileadmin',
 	                          cash='$cashadmin',
-	                          db_author='$dbauthor' WHERE userID='".$id."'");
+	                          db_author='$dbauthor',
+	                          hosting='$hostingadmin',
+							  hostingusr='$hostingusr' WHERE userID='".$id."'");
 	
 			//remove from mods
 			if($moderator == false){
@@ -213,8 +217,11 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	if(isfileadmin($id)) $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" checked="checked" />';
 	else $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" />';
 
-	/*if(iscashadmin($id)) $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" />';*/
+	if(ishostingadmin($id)) $hosting='<input type="checkbox" name="hostingadmin" value="1" onmouseover="showWMTT(\'id15\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $hosting='<input type="checkbox" name="hostingadmin" value="1" onmouseover="showWMTT(\'id15\')" onmouseout="hideWMTT()" />';
+	
+	if(ishostingusr($id)) $hostu='<input type="checkbox" name="hostingusr" value="1" onmouseover="showWMTT(\'id16\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $hostu='<input type="checkbox" name="hostingusr" value="1" onmouseover="showWMTT(\'id16\')" onmouseout="hideWMTT()" />';
 
 	if(isgalleryadmin($id)) $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" checked="checked" />';
 	else $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" />';
@@ -271,6 +278,8 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
   <div class="tooltip" id="id12">'.$_language->module['tooltip_12'].'</div>
   <div class="tooltip" id="id13">'.$_language->module['tooltip_13'].'</div>
   <div class="tooltip" id="id14">'.$_language->module['tooltip_14'].'</div>
+  <div class="tooltip" id="id15">'.$_language->module['tooltip_15'].'</div>
+  <div class="tooltip" id="id16">'.$_language->module['tooltip_16'].'</div>
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['nickname'].'</b></td>
@@ -307,6 +316,11 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
       <td>'.$file.' '.$_language->module['file_admin'].'</td>
     </tr>
 	  <tr>
+      <td>'.$hosting.' '.$_language->module['hosting_admin'].'</td>
+	  <td>'.$hostu.' '.$_language->module['hosting_usr'].'</td>
+      <td></td>
+    </tr>
+	  <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -315,6 +329,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	if(issuperadmin($userID)) {
     echo '<tr>
       <td colspan="3">'.$super.' <b>'.$_language->module['super_admin'].'</b></td>
+	  
      </tr>';
    }
    

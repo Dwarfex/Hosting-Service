@@ -1,0 +1,7 @@
+	<tr>
+    	<td bgcolor="$bg1" align="center"><img src="images/shopicons/delete.png" onClick="MM_goToURL('parent', 'index.php?site=shop&amp;action=delcart&amp;id=$dw[korbID]'); return document.MM_returnValue;"></td>
+    	<td bgcolor="$bg1" align="center"><input type="text" size="2" value="$anzahl" id="$nr" name="$nr" onchange="cartThisAnzahl($dp[produktID], document.getElementById('$nr').value, $korbID)" /><br /><br /><small>%stock% $max</small></td>
+    	<td bgcolor="$bg1"><a href="index.php?site=shop&amp;action=product&amp;catID=$catID&amp;produktID=$dp[produktID]">$img $name</a></td>
+     	<td bgcolor="$bg1" align="center">$preis</td>
+        <td bgcolor="$bg1" align="center">$gesamt</td>
+   	</tr>

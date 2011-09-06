@@ -1,0 +1,59 @@
+#page { width:950px; height:auto; margin:auto; }
+#stats { background:url(styles/head/statsbg.jpg); width:932px; height:23px; padding:6px 9px 0 9px; }
+#header { background:url(styles/head/header.jpg); width:322px; height:96px; padding:45px 0 0 628px; position:relative; }
+#language { position:absolute; top:2px; right:5px; }
+
+#contentpuffer { background:url(styles/contentpuffer.jpg); width:950px; height:auto; }
+#left { width:239px; height:auto; float:left; }
+.latestwarsbg { background:url(styles/content/latestwarsbg.jpg); width:234px; height:28px; border:1px solid #000; margin:2px 0 0 1px; cursor:pointer; }
+.latestwarsbg:hover { background:#262626; }
+.latestwarsbg img { padding:5px 0 0 3px; float:left; }
+.latestwarsname { padding:8px 0 0 5px; float:left; }
+.latestwarsresult { padding:8px 6px 0 0; float:right; }
+#bannerrotation { padding:9px 0; text-align:center; }
+
+#right { width:710px; height:auto; float:right; }
+#partner { background:url(styles/content/partnerbg.jpg); width:710px; height:125px; position:relative; }
+#sliderbg { background:url(styles/content/sliderbg.png); width:350px; height:159px; position:absolute; z-index:100; top:-37px; padding:3px 0 0 5px; }
+.sliderwrapper { position:relative; overflow:hidden; width:344px; height:156px; }
+.sliderwrapper .contentdiv { visibility:hidden; position:absolute; left:0; top:0; width:344px; height:156px; z-index:110; }
+.pagination { width:auto; text-align:center; display:inline; position:absolute; left:10px; top:128px; z-index:200; }
+.pagination a { background:url(styles/content/sliderbutton.png); width:28px; height:28px; display:block; line-height:28px; color:#001; text-decoration:none; cursor:pointer; float:left; margin:0 2px; z-index:200; }
+.pagination a:hover, .pagination a:visited, .pagination a:active, .pagination a.selected { background:url(styles/content/sliderbuttonh.png); color:#000; text-decoration:none; z-index:200; }
+.stepcarousel { float:right; width:242px; height:70px; margin:30px 57px 0 0; position:relative; overflow:hidden; display:inline; }
+.stepcarousel .belt { position:absolute; left:0; top:0; }
+.stepcarousel .panel { float:left; width:280px; overflow:hidden; }
+#right_left { width:470px; height:auto; float:left; }
+#right_right { width:239px; height:auto; float:right; }
+.navigation { width:239px; height:auto; }
+.navigation ul { padding:0; margin:0; }
+.navigation li { background:url(styles/content/navi.jpg); width:239px; height:24px; margin:0; list-style-type:none; }
+.navigation li a, .navigation li a:visited , .navigation li a:active { height:18px; display:block; color:#ffe; text-transform:uppercase; padding:6px 0 0 25px; outline:none; }
+.navigation li:hover, .navigation li a:hover { background:url(styles/content/navih.jpg); color:#fff; }
+#topmatchbg { background:url(styles/content/topmatchbg.jpg); width:239px; height:137px; }
+#topmatchlogo1 { float:left; margin:5px 0 0 5px; border:1px solid #000; }
+#topmatchlogo2 { float:right; margin:5px 5px 0 0; border:1px solid #000; }
+#topmatchname1 { width:100px; padding:3px 0 0 5px; text-align:center; float:left; color:#547a26; }
+#topmatchvs { font-size:14px; font-weight:bold; padding-left:5px; float:left; }
+#topmatchname2 { width:100px; padding:3px 5px 0 0; text-align:center; float:right; color:#547a26; }
+#topmatchdate { background:url(styles/content/datebg.jpg); width:181px; height:16px; margin:0 0 0 25px; padding:5px 0 0 6px; }
+#topmatchmap { background:url(styles/content/mapbg.jpg); width:181px; height:16px; margin:0 0 0 25px; padding:5px 0 0 6px; }
+#topmatchschein { background:url(styles/content/schein.jpg); width:187px; height:17px; margin:0 0 0 25px; }
+
+#footer { background:url(styles/footer.jpg); width:910px; height:39px; padding:24px 20px 0 20px; display:block; }
+
+.newshead { padding:13px 0 0 3px; float:left; }
+.newsdate { padding:6px 3px 0 0; float:right; text-align:right; }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+	</tr>
+    <tr>
+    	<td height="20" align="right" colspan="4" bgcolor="$bg1"><strong>%subtotal%:</strong></td>
+        <td align="right" colspan="1" bgcolor="$bg1">$korb_gesamt $currency</td>
+    </tr>
+</table>
+
+<table cellpadding="2" cellspacing="0" border="0" width="100%" bgcolor="$border">
+ 	<tr>
+  		<td colspan="5" bgcolor="$bg2" valign="top">
+   			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   				<form name="bestellung">
+    				<tr>
+     					<td width="75%"><input type="checkbox" onClick="javascript: if (document.bestellung.bestellung.disabled == true) { document.bestellung.bestellung.disabled = false; document.bestellung.bestellung.value = '%checkout%'; } else { document.bestellung.bestellung.disabled = true; document.bestellung.bestellung.value = '%accept_agb%'; }"> %read_accept% <a href="javascript:MM_openBrWindow('agb.php','','scrollbars=yes,width=600,height=500')"><u>%tic%</u></a></td>
+     					<td width="25%" align="right"><input name="bestellung" class="button" onClick="MM_goToURL('parent', 'index.php?site=shop&amp;action=send'); return document.MM_returnValue;" value="%accept_agb%" type="button"><script type="text/javascript">document.bestellung.bestellung.disabled = true;</script></td>
+    				</tr>
+   				</form>
+   			</table>
