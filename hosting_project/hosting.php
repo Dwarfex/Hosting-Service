@@ -107,7 +107,8 @@ if(isset($_POST['save'])) {
 		$hosting_folder = $hos2['hosting_folder_'.$hos1['hosting_folder'].'']; // webspell , clan,esports and so on 
 		echo '1-3 &raquo;&nbsp;';
 		echo $_language->module['ws_files_copy'].'<br>';
-		$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
+		$target = '../hosting_files/'.$ident;
+		//$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
 		$source = 'ws_versions/ws'.$ds3['WebspellID'];
 		full_copy( $source, $target );
 		include("../_mysql.php");
@@ -172,7 +173,8 @@ elseif(isset($_POST['edit'])) {
 			$hos2=mysql_fetch_array($hosting2);	
 			$hosting_folder = $hos2['hosting_folder_'.$hos1['hosting_folder'].'']; // webspell , clan,esports and so on 
 		
-			$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
+			//$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
+			$target = '../hosting_files/'.$ident;
 			$source = 'ws_versions/ws'.$ds['WebspellID'];
 			full_copy( $source, $target );
 			include("../_mysql.php");
@@ -222,7 +224,8 @@ elseif(isset($_POST['edit'])) {
 			$hos2=mysql_fetch_array($hosting2);	
 			$hosting_folder = $hos2['hosting_folder_'.$hos1['hosting_folder'].'']; // webspell , clan,esports and so on 
 		
-			$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
+			//$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
+			$target = '../hosting_files/'.$ident;
 			$source = 'ws_versions/ws'.$ds['WebspellID'];
 			full_copy( $source, $target );
 			echo '2-5 &raquo;&nbsp;';
@@ -303,7 +306,8 @@ elseif(isset($_GET['delete'])) {
 		$hos2=mysql_fetch_array($hosting2);	
 		$hosting_folder = $hos2['hosting_folder_'.$hos1['hosting_folder'].'']; // webspell , clan,esports and so on 
 			
-			$dir = "../hosting_files/".$hosting_folder."/".$ds['subdomain']."/";
+			//$dir = "../hosting_files/".$hosting_folder."/".$ds['subdomain']."/";
+			$dir = "../hosting_files/".$ds['subdomain']."/";
 			$path = $dir;
 			$path1 = $path.'admin/';
 			$path2 = $path.'downloads/';
@@ -425,12 +429,14 @@ elseif(isset($_GET['install'])) {
 		$header_location = $head['header_location'];
 		$header_file = $head['header_name'];
 		$PSDFile = 'ws_templates/'.$head['location'].'/PSD/header.psd';
-		$filename = '../hosting_files/'.$hosting_folder.'/'.$subdomain.'/'.$header_location.''.$header_file;
+		//$filename = '../hosting_files/'.$hosting_folder.'/'.$subdomain.'/'.$header_location.''.$header_file;
+		$filename = '../hosting_files/'.$subdomain.'/'.$header_location.''.$header_file;
 		
 		
 		
 		$pic = $_FILES['pic'];
-		$filepath = '../hosting_files/'.$hosting_folder.'/'.$subdomain.'/'.$header_location ;
+		//$filepath = '../hosting_files/'.$hosting_folder.'/'.$subdomain.'/'.$header_location ;
+		$filepath = '../hosting_files/'.$subdomain.'/'.$header_location ;
 		if($pic['name'] != "") {
 			move_uploaded_file($pic['tmp_name'], $filepath.$pic['name'].".tmp");
 			@chmod($filepath.$pic['name'].".tmp", 0755);
@@ -705,7 +711,8 @@ elseif($action=="header") {
 	$header_location = $head['header_location'];
 	$header_file = $head['header_name'];
 	$PSDFile = 'ws_templates/'.$head['location'].'/PSD/header.psd';
-	$filename = '../hosting_files/'.$hosting_folder.'/'.$subdomain.'/'.$header_location.''.$header_file;
+	//$filename = '../hosting_files/'.$hosting_folder.'/'.$subdomain.'/'.$header_location.''.$header_file;
+	$filename = '../hosting_files/'.$subdomain.'/'.$header_location.''.$header_file;
 	$imagesize = getimagesize($filename);		
 	
 $Breite = $imagesize[0]*0.4 ;
