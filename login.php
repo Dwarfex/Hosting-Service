@@ -51,7 +51,7 @@ if($loggedin) {
 	else $admin='';
 	//hosting addon
 	if(isanyhosting($userID)) $hosting='<a href="hosting_project/admincenter.php" target="_blank">'.$_language->module['hosting'].'</a><br />';
-	else $hosting='<a href="http://www.webspell-cms.org/index.php?site=loginoverview&action=unlockhosting">Unlock Hosting</a><br />';
+	else $hosting='<a href="index.php?site=loginoverview&action=unlockhosting">Unlock Hosting</a><br />';
 	///////////////////////////////////////////////////////////////////////////////////////
 	// support addon start
 	if(ishostingadmin($userID)) {
