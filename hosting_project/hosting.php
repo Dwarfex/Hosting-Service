@@ -508,7 +508,11 @@ if($action=="add") {
 	$maxprojects = $maxproj['maxprojects'];
 	$menge = mysql_num_rows($count);
 	
-	if ( ($menge < $maxprojects) || (ishostingadmin($userID)) ) {
+	if ($menge > $maxprojects || $menge == $maxprojects) {
+		
+		echo 'cannot add, too much projects<br /><br />';
+		
+	}elseif ( ($menge < $maxprojects) || (ishostingadmin($userID)) ) {
 	
 	 
 	
@@ -551,11 +555,6 @@ if($action=="add") {
     </table>
     </form>';
 	
-	}
-	elseif ($menge > $maxprojects || $menge == $maxprojects) {
-		
-		echo 'cannot add, too much projects<br /><br />';
-		
 	}
 	
 }
