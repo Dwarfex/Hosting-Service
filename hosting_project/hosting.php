@@ -374,7 +374,7 @@ elseif(isset($_GET['install'])) {
 			$homepagename = '';
 			$get_id=safe_query("SELECT * FROM ".PREFIX."hosting WHERE ProjectID='".$projectID."'");
 			$gi=mysql_fetch_array($get_id);	
-			$homepagename =  $gi['ProjectName'];
+			global $homepagename =  $gi['ProjectName'];
 			 
 			// check if project could already be installed
 			if ($gi['installed'] == 0 ){
@@ -385,11 +385,11 @@ elseif(isset($_GET['install'])) {
 				$ud=mysql_fetch_array($user_data);	
 				
 				// old user data for projects new admin data
-				$prefix = $ident.'_';
-				$adminname = $ud['username'];
-				$adminpassword = $ud['password'];
-				$adminmail = $ud['email'];
-				$url = $_POST['url'];
+				 $prefix = $ident.'_';
+				global $adminname = $ud['username'];
+				global $adminpassword = $ud['password'];
+				global $adminmail = $ud['email'];
+				global $url = $_POST['url'];
 				define("INST", $prefix);
 				echo '1-3 &raquo;&nbsp;';
 				echo $_language->module['install'].'<br />';
@@ -613,7 +613,7 @@ elseif($action=="edit") {
 			
 			if (    ($aktTempID == $du['TemplateID'])   || (($du['name'] == 'Basic')&& (($aktTempID == 0) || ($aktTempID == 1) || ($aktTempID == 2))))  {
 			
-				// aktuelles Template Vorausgewählt
+				// aktuelles Template Vorausgewï¿½hlt
 				echo'
 				<table width="100%" border="0" cellspacing="1" cellpadding="3">
 				<tr>
@@ -630,7 +630,7 @@ elseif($action=="edit") {
 				</tr>
 				</table>';  
 			}else{
-	  // ansicht für normales template
+	  // ansicht fï¿½r normales template
 	 echo'
 				<table width="100%" border="0" cellspacing="1" cellpadding="3">
 				<tr>
