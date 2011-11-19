@@ -108,9 +108,12 @@ if(isset($_POST['save'])) {
 		echo '1-3 &raquo;&nbsp;';
 		echo $_language->module['ws_files_copy'].'<br>';
 		$target = '../hosting_files/'.$ident;
+		//echo 'target set';
 		//$target = '../hosting_files/'.$hosting_folder.'/'.$ident;
 		$source = 'ws_versions/ws'.$ds3['WebspellID'];
+		//echo 'source set';
 		full_copy( $source, $target );
+		//echo 'full_copy';
 		include("../_mysql.php");
 		echo '2-3 &raquo;&nbsp;';
 		echo $_language->module['ws_files_copied'].'<br>'; 
@@ -385,7 +388,7 @@ elseif(isset($_GET['install'])) {
 				$ud=mysql_fetch_array($user_data);	
 				
 				// old user data for projects new admin data
-				 $prefix = $ident.'_';
+				$prefix = $ident.'_';
 				global $adminname = $ud['username'];
 				global $adminpassword = $ud['password'];
 				global $adminmail = $ud['email'];
@@ -394,6 +397,7 @@ elseif(isset($_GET['install'])) {
 				echo '1-3 &raquo;&nbsp;';
 				echo $_language->module['install'].'<br />';
 				echo '2-3 &raquo;&nbsp;';
+				
 				//installing webspell basic version
 				include('ws_versions/inst_ws'.$ds['WebspellID'].'/install/install.php'); //missing -> in file maybe?
 				
@@ -504,11 +508,7 @@ if($action=="add") {
 	$maxprojects = $maxproj['maxprojects'];
 	$menge = mysql_num_rows($count);
 	
-	if ($menge > $maxprojects || $menge == $maxprojects) {
-		
-		echo 'cannot add, too much projects<br /><br />';
-		
-	}elseif ( ($menge < $maxprojects) || (ishostingadmin($userID)) ) {
+	if ( ($menge < $maxprojects) || (ishostingadmin($userID)) ) {
 	
 	 
 	
@@ -551,6 +551,11 @@ if($action=="add") {
     </table>
     </form>';
 	
+	}
+	elseif ($menge > $maxprojects || $menge == $maxprojects) {
+		
+		echo 'cannot add, too much projects<br /><br />';
+		
 	}
 	
 }
@@ -613,7 +618,7 @@ elseif($action=="edit") {
 			
 			if (    ($aktTempID == $du['TemplateID'])   || (($du['name'] == 'Basic')&& (($aktTempID == 0) || ($aktTempID == 1) || ($aktTempID == 2))))  {
 			
-				// aktuelles Template Vorausgew�hlt
+				// aktuelles Template Vorausgewählt
 				echo'
 				<table width="100%" border="0" cellspacing="1" cellpadding="3">
 				<tr>
@@ -630,7 +635,7 @@ elseif($action=="edit") {
 				</tr>
 				</table>';  
 			}else{
-	  // ansicht f�r normales template
+	  // ansicht für normales template
 	 echo'
 				<table width="100%" border="0" cellspacing="1" cellpadding="3">
 				<tr>
