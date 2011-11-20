@@ -44,11 +44,7 @@
 
 function fullinstall() {
 
-	global $adminname;
-	global $adminpassword;
-	global $adminmail;
-	global $url;
-	global $homepagename;
+	
 	mysql_query("DROP TABLE IF EXISTS `".INST."about`");
 	mysql_query("CREATE TABLE `".INST."about` (
   `about` longtext NOT NULL
