@@ -1,9 +1,9 @@
 <?php
 
 
-//include("_mysql.php");
-//include("_settings.php");
-//include("_functions.php");
+include("_mysql.php");
+include("_settings.php");
+include("_functions.php");
 
 mysql_query("CREATE TABLE IF NOT EXISTS `".PREFIX."hosting_wsversion` (
 `WebspellID` int(255) NOT NULL AUTO_INCREMENT,
