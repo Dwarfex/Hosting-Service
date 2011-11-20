@@ -24,7 +24,16 @@
 #                                                                        #
 ##########################################################################
 */
+ global $adminname;
 
+ global $adminpassword;
+
+ global $adminmail;
+
+ global $url;
+
+ global $homepagename; 
+ 
 function fullinstall() {
 
 	
